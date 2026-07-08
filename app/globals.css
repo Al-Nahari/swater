@@ -1,211 +1,211 @@
 @import "tailwindcss";
 
 :root {
-  /* Coffee & Desert & Road Color Palette */
-  --background: #faf8f5;
+  /* ===== Saudi Identity Color Palette ===== */
+  --background: #f8f6f0;
   --foreground: #2d2416;
-  --primary: #8b4513;
-  --primary-dark: #654321;
-  --primary-light: #a0522d;
-  --secondary: #6b8e23;
-  --accent: #d2691e;
-  --accent-dark: #b8860b;
-  --muted: #f5ebe0;
-  --muted-foreground: #5a4a3f;
-  --border: #d4c4a8;
-  --success: #556b2f;
-  --error: #cd5c5c;
-  --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.06);
-  --card-shadow-hover: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.08);
   
-  /* Desert & Sand Tones */
-  --sand-light: #fdf6e3;
-  --sand-medium: #f5ebe0;
-  --sand-dark: #e8d5c4;
+  /* Saudi Green Colors */
+  --saudi-green: #1a5c3a;
+  --saudi-green-light: #2d8f5a;
+  --saudi-green-dark: #0d3b22;
+  --saudi-green-pale: #e8f5ee;
   
-  /* Coffee Tones */
-  --coffee-light: #c4a77d;
-  --coffee-medium: #8b4513;
-  --coffee-dark: #654321;
-  --coffee-espresso: #3e2723;
+  /* Saudi Gold Colors */
+  --saudi-gold: #c9a84c;
+  --saudi-gold-light: #e8d5a3;
+  --saudi-gold-dark: #a8892e;
+  --saudi-gold-pale: #faf3e0;
   
-  /* Road & Earth Tones */
-  --earth-tan: #d2b48c;
-  --earth-brown: #8b7355;
-  --road-gray: #6b6b6b;
+  /* Saudi Earth Tones */
+  --saudi-sand: #e8ddd0;
+  --saudi-brown: #6d4c2a;
+  --saudi-brown-light: #8b6b4a;
+  --saudi-red: #a83232;
+  
+  /* White & Grays */
+  --saudi-white: #f8f6f0;
+  --saudi-gray: #8a7e72;
+  --saudi-gray-light: #d4ccc4;
   
   /* Gradients */
-  --coffee-gradient: linear-gradient(135deg, #a0522d 0%, #8b4513 50%, #654321 100%);
-  --desert-gradient: linear-gradient(135deg, #fdf6e3 0%, #f5ebe0 50%, #e8d5c4 100%);
-  --earth-gradient: linear-gradient(135deg, #d2b48c 0%, #8b7355 100%);
-  --hero-gradient: linear-gradient(135deg, #fdf6e3 0%, #f5ebe0 100%);
+  --saudi-hero-gradient: linear-gradient(135deg, rgba(26, 92, 58, 0.92) 0%, rgba(13, 59, 34, 0.88) 50%, rgba(26, 92, 58, 0.92) 100%);
+  --saudi-gold-gradient: linear-gradient(135deg, #c9a84c 0%, #e8d5a3 30%, #c9a84c 60%, #a8892e 100%);
+  --saudi-green-gradient: linear-gradient(135deg, #1a5c3a 0%, #2d8f5a 50%, #0d3b22 100%);
+  --saudi-warm-gradient: linear-gradient(135deg, #f8f6f0 0%, #e8ddd0 100%);
+  
+  /* Shadows */
+  --shadow-elegant: 0 10px 40px rgba(0, 0, 0, 0.08), 0 6px 20px rgba(0, 0, 0, 0.05);
+  --shadow-gold: 0 10px 40px rgba(201, 168, 76, 0.3);
+  --shadow-strong: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-green: 0 10px 40px rgba(26, 92, 58, 0.25);
+  
+  /* Borders */
+  --border-gold: #c9a84c;
+  --border-sand: #e8ddd0;
+  --border-green: #1a5c3a;
 }
-@layer utilities {
-  .bg-gradient-primary {
-    background: var(--coffee-gradient);
-  }
-  
-  .bg-gradient-desert {
-    background: var(--desert-gradient);
-  }
-  
-  .bg-gradient-earth {
-    background: var(--earth-gradient);
-  }
-  
-  /* Coffee background colors */
-  .bg-coffee-light { background-color: var(--coffee-light); }
-  .bg-coffee-medium { background-color: var(--coffee-medium); }
-  .bg-coffee-dark { background-color: var(--coffee-dark); }
-  .bg-coffee-espresso { background-color: var(--coffee-espresso); }
-  
-  /* Sand background colors */
-  .bg-sand-light { background-color: var(--sand-light); }
-  .bg-sand-medium { background-color: var(--sand-medium); }
-  .bg-sand-dark { background-color: var(--sand-dark); }
-  
-  /* Earth background colors */
-  .bg-earth-tan { background-color: var(--earth-tan); }
-  .bg-earth-brown { background-color: var(--earth-brown); }
-  .bg-road-gray { background-color: var(--road-gray); }
-  
-  /* Coffee text colors */
-  .text-coffee-light { color: var(--coffee-light); }
-  .text-coffee-medium { color: var(--coffee-medium); }
-  .text-coffee-dark { color: var(--coffee-dark); }
-  .text-coffee-espresso { color: var(--coffee-espresso); }
-  
-  /* Sand text colors */
-  .text-sand-light { color: var(--sand-light); }
-  .text-sand-medium { color: var(--sand-medium); }
-  .text-sand-dark { color: var(--sand-dark); }
-  
-  /* Earth text colors */
-  .text-earth-tan { color: var(--earth-tan); }
-  .text-earth-brown { color: var(--earth-brown); }
-  .text-road-gray { color: var(--road-gray); }
-  
-  /* Primary text colors */
-  .text-primary-light { color: var(--primary-light); }
-  .text-primary-dark { color: var(--primary-dark); }
-  
-  /* Accent text colors */
-  .text-accent-light { color: var(--accent); }
-  .text-accent-dark { color: var(--accent-dark); }
-  
-  /* Secondary text color */
-  .text-secondary { color: var(--secondary); }
-  
-  /* Border colors */
-  .border-coffee { border-color: var(--coffee-medium); }
-  .border-coffee-light { border-color: var(--coffee-light); }
-  .border-coffee-dark { border-color: var(--coffee-dark); }
-  .border-sand { border-color: var(--sand-medium); }
-  .border-primary-light { border-color: var(--primary-light); }
-  .border-primary-dark { border-color: var(--primary-dark); }
-  .border-secondary { border-color: var(--secondary); }
-  
-  /* Ring colors */
-  .ring-coffee { ring-color: var(--coffee-medium); }
-  .ring-coffee-light { ring-color: var(--coffee-light); }
-  .ring-coffee-dark { ring-color: var(--coffee-dark); }
-  .ring-primary { ring-color: var(--primary); }
-  .ring-primary-light { ring-color: var(--primary-light); }
-  .ring-primary-dark { ring-color: var(--primary-dark); }
-  .ring-secondary { ring-color: var(--secondary); }
-}
+
+/* ============================================================ */
+/* BASE STYLES */
+/* ============================================================ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
-  --color-primary-light: var(--primary-light);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --color-accent-dark: var(--accent-dark);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-success: var(--success);
-  --color-error: var(--error);
   
-  /* Coffee color family */
-  --color-coffee-light: var(--coffee-light);
-  --color-coffee-medium: var(--coffee-medium);
-  --color-coffee-dark: var(--coffee-dark);
-  --color-coffee-espresso: var(--coffee-espresso);
+  /* Saudi Colors */
+  --color-saudi-green: var(--saudi-green);
+  --color-saudi-green-light: var(--saudi-green-light);
+  --color-saudi-green-dark: var(--saudi-green-dark);
+  --color-saudi-gold: var(--saudi-gold);
+  --color-saudi-gold-light: var(--saudi-gold-light);
+  --color-saudi-gold-dark: var(--saudi-gold-dark);
+  --color-saudi-sand: var(--saudi-sand);
+  --color-saudi-brown: var(--saudi-brown);
+  --color-saudi-white: var(--saudi-white);
   
-  /* Sand color family */
-  --color-sand-light: var(--sand-light);
-  --color-sand-medium: var(--sand-medium);
-  --color-sand-dark: var(--sand-dark);
-  
-  /* Earth color family */
-  --color-earth-tan: var(--earth-tan);
-  --color-earth-brown: var(--earth-brown);
-  --color-road-gray: var(--road-gray);
-  
-  --font-sans: 'Noto Sans Arabic', system-ui, sans-serif;
+  --font-sans: 'Tajawal', 'Noto Sans Arabic', system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
+/* ============================================================ */
+/* CUSTOM SCROLLBAR */
+/* ============================================================ */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--muted);
+  background: var(--saudi-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
-  border-radius: 5px;
-  border: 2px solid var(--muted);
+  background: linear-gradient(180deg, var(--saudi-gold), var(--saudi-green));
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(180deg, var(--saudi-green), var(--saudi-gold));
 }
 
-/* Animations */
+/* ============================================================ */
+/* ANIMATIONS - Keyframes */
+/* ============================================================ */
+
+/* Fade Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px) scale(0.96);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.96);
+  }
+  to {
     opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Floating & Bouncing */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
   }
   50% {
-    opacity: 0.7;
+    transform: translateY(-16px);
   }
 }
 
-@keyframes shimmer {
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes bounceSoft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Shimmer & Glow */
+@keyframes shimmerGold {
+  0% {
+    background-position: -300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes shimmerGreen {
   0% {
     background-position: -200% 0;
   }
@@ -214,49 +214,57 @@ html {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(201, 168, 76, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(201, 168, 76, 0.5);
+  }
 }
 
-.animate-pulse-slow {
-  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+@keyframes greenPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(26, 92, 58, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(26, 92, 58, 0.4);
+  }
 }
 
-/* Gradient backgrounds */
-.bg-gradient-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: var(--saudi-gold);
+  }
+  50% {
+    border-color: var(--saudi-green);
+  }
 }
 
-.bg-gradient-hero {
-  background: var(--hero-gradient);
+/* Rotating & Spinning */
+@keyframes arabesqueSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Card hover effects */
-.card-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--card-shadow-hover);
-}
-
-/* Floating Contact Button */
-.floating-contact {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  animation: slideInUp 0.5s ease-out;
-}
-
+/* Slide & Reveal */
 @keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -264,91 +272,649 @@ html {
   }
 }
 
-.floating-contact-btn {
-  width: 56px;
-  height: 56px;
+@keyframes revealWidth {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Breathing & Heartbeat */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+/* Saudi Pattern Animation */
+@keyframes patternMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 80px 80px;
+  }
+}
+
+@keyframes sandDrift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* ============================================================ */
+/* ANIMATION UTILITY CLASSES */
+/* ============================================================ */
+
+/* Fade */
+.animate-fade-up {
+  animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-fade-down {
+  animation: fadeInDown 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-fade-left {
+  animation: fadeInLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-fade-right {
+  animation: fadeInRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-scale-in {
+  animation: scaleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Float */
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+.animate-bounce-soft {
+  animation: bounceSoft 2s ease-in-out infinite;
+}
+
+/* Shimmer */
+.animate-shimmer-gold {
+  background: linear-gradient(90deg,
+      var(--saudi-gold-dark),
+      var(--saudi-gold),
+      var(--saudi-gold-light),
+      var(--saudi-gold),
+      var(--saudi-gold-dark));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerGold 4s ease-in-out infinite;
+}
+
+.animate-shimmer-green {
+  background: linear-gradient(90deg,
+      var(--saudi-green-dark),
+      var(--saudi-green),
+      var(--saudi-green-light),
+      var(--saudi-green),
+      var(--saudi-green-dark));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerGreen 4s ease-in-out infinite;
+}
+
+/* Pulse */
+.animate-gold-pulse {
+  animation: goldPulse 3s ease-in-out infinite;
+}
+.animate-green-pulse {
+  animation: greenPulse 3s ease-in-out infinite;
+}
+.animate-border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* Spin */
+.animate-arabesque-spin {
+  animation: arabesqueSpin 20s linear infinite;
+}
+.animate-slow-spin {
+  animation: slowSpin 30s linear infinite;
+}
+
+/* Other */
+.animate-slide-up {
+  animation: slideInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-reveal-width {
+  animation: revealWidth 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.animate-breathe {
+  animation: breathe 3s ease-in-out infinite;
+}
+.animate-heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+.animate-pattern-move {
+  animation: patternMove 60s linear infinite;
+}
+.animate-sand-drift {
+  animation: sandDrift 20s ease-in-out infinite alternate;
+}
+
+/* Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+.delay-1000 { animation-delay: 1s; }
+
+/* ============================================================ */
+/* SAUDI PATTERNS & BACKGROUNDS */
+/* ============================================================ */
+
+/* Saudi Pattern Background */
+.bg-saudi-pattern {
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(26, 92, 58, 0.04) 0%, transparent 50%),
+    repeating-linear-gradient(45deg,
+      transparent,
+      transparent 20px,
+      rgba(201, 168, 76, 0.03) 20px,
+      rgba(201, 168, 76, 0.03) 21px);
+}
+
+/* Saudi Desert Pattern */
+.bg-saudi-desert {
+  background-image:
+    radial-gradient(ellipse at 30% 70%, rgba(232, 221, 208, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(232, 221, 208, 0.2) 0%, transparent 50%),
+    repeating-linear-gradient(65deg,
+      transparent,
+      transparent 30px,
+      rgba(232, 221, 208, 0.1) 30px,
+      rgba(232, 221, 208, 0.1) 31px);
+}
+
+/* Saudi Gold Pattern */
+.bg-saudi-gold-pattern {
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 60%),
+    repeating-linear-gradient(30deg,
+      transparent,
+      transparent 15px,
+      rgba(201, 168, 76, 0.03) 15px,
+      rgba(201, 168, 76, 0.03) 16px);
+}
+
+/* ============================================================ */
+/* SAUDI BORDERS & FRAMES */
+/* ============================================================ */
+
+/* Gold Border Frame */
+.gold-border {
+  border: 2px solid var(--saudi-gold);
+  position: relative;
+}
+.gold-border::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 2px solid var(--saudi-gold-light);
+  opacity: 0.3;
+  border-radius: inherit;
+}
+
+/* Saudi Corner Ornaments */
+.saudi-corner {
+  position: relative;
+}
+.saudi-corner::before,
+.saudi-corner::after {
+  content: '✦';
+  position: absolute;
+  color: var(--saudi-gold);
+  font-size: 1.2rem;
+  opacity: 0.4;
+}
+.saudi-corner::before {
+  top: -8px;
+  right: -8px;
+}
+.saudi-corner::after {
+  bottom: -8px;
+  left: -8px;
+}
+
+/* Gold Bottom Border */
+.gold-bottom-border {
+  border-bottom: 3px solid var(--saudi-gold);
+  position: relative;
+}
+.gold-bottom-border::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--saudi-green);
+  border-radius: 10px;
+}
+
+/* ============================================================ */
+/* SAUDI GRADIENTS */
+/* ============================================================ */
+
+.bg-saudi-hero {
+  background: var(--saudi-hero-gradient);
+}
+.bg-saudi-gold-gradient {
+  background: var(--saudi-gold-gradient);
+}
+.bg-saudi-green-gradient {
+  background: var(--saudi-green-gradient);
+}
+.bg-saudi-warm-gradient {
+  background: var(--saudi-warm-gradient);
+}
+
+/* ============================================================ */
+/* CARD & COMPONENT STYLES */
+/* ============================================================ */
+
+/* Service Card */
+.service-card {
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-elegant);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--saudi-green), var(--saudi-gold));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+.service-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--saudi-gold);
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-elegant);
+  border-right: 4px solid var(--saudi-gold);
+  transition: all 0.4s ease;
+}
+.testimonial-card:hover {
+  transform: translateX(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* Gallery Item */
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  box-shadow: var(--shadow-elegant);
+}
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+.gallery-item::after {
+  content: '🔍';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 92, 58, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(2px);
+}
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* Stats Number */
+.stat-number {
+  font-size: 3.2rem;
+  font-weight: 800;
+  background: var(--saudi-gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================ */
+/* FLOATING CONTACT BUTTONS */
+/* ============================================================ */
+.floating-contact {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.floating-btn {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-strong);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.floating-btn:hover {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: var(--shadow-gold);
+}
+.floating-btn svg {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.floating-contact-btn:hover {
-  transform: scale(1.1) rotate(-5deg);
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2), 0 10px 10px -5px rgb(0 0 0 / 0.1);
+.floating-btn.whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+.floating-btn.phone {
+  background: var(--saudi-green-gradient);
 }
 
-.floating-contact-btn svg {
-  width: 26px;
-  height: 26px;
-}
-
-.floating-contact-btn.whatsapp {
-  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-  color: white;
-}
-
-.floating-contact-btn.phone {
-  background: var(--coffee-gradient);
-  color: white;
-}
-
-.floating-contact-btn .tooltip {
+.floating-btn .tooltip {
   position: absolute;
-  right: 65px;
-  bottom: 50%;
-  transform: translateY(50%);
-  background: var(--coffee-dark);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
+  left: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--saudi-green-dark);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
-
-.floating-contact-btn:hover .tooltip {
+.floating-btn:hover .tooltip {
   opacity: 1;
 }
 
-/* Responsive adjustments */
 @media (max-width: 640px) {
   .floating-contact {
     bottom: 1rem;
-    right: 1rem;
-    gap: 0.5rem;
+    left: 1rem;
+    gap: 0.7rem;
   }
-  
-  .floating-contact-btn {
+  .floating-btn {
     width: 50px;
     height: 50px;
   }
-  
-  .floating-contact-btn svg {
+  .floating-btn svg {
     width: 24px;
     height: 24px;
   }
-  
-  .floating-contact-btn .tooltip {
+  .floating-btn .tooltip {
     display: none;
   }
 }
 
-/* Input focus styles */
+/* ============================================================ */
+/* INPUT FOCUS STYLES */
+/* ============================================================ */
 input:focus,
 textarea:focus,
 select:focus {
-  @apply ring-2 ring-primary ring-offset-2 outline-none;
+  @apply ring-2 ring-saudi-gold ring-offset-2 outline-none;
 }
 
-/* Container */
+/* ============================================================ */
+/* CONTAINER */
+/* ============================================================ */
 .container {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
+/* ============================================================ */
+/* FOOTER STYLES */
+/* ============================================================ */
+.footer-saudi {
+  background: linear-gradient(135deg, #0d3b22, #1a5c3a);
+  color: var(--saudi-white);
+  border-top: 3px solid var(--saudi-gold);
+}
 
+/* ============================================================ */
+/* RESPONSIVE ADJUSTMENTS */
+/* ============================================================ */
+@media (max-width: 768px) {
+  .stat-number {
+    font-size: 2.4rem;
+  }
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .floating-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-number {
+    font-size: 2rem;
+  }
+  .service-card {
+    padding: 1.2rem 0.8rem;
+  }
+}
+
+/* ============================================================ */
+/* SAUDI DECORATIVE ELEMENTS */
+/* ============================================================ */
+
+/* Saudi Star Decoration */
+.saudi-star {
+  display: inline-block;
+  position: relative;
+}
+.saudi-star::before {
+  content: '★';
+  color: var(--saudi-gold);
+  font-size: 1.5rem;
+}
+
+/* Saudi Pattern Divider */
+.divider-saudi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.divider-saudi::before,
+.divider-saudi::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--saudi-gold), transparent);
+}
+.divider-saudi span {
+  color: var(--saudi-gold);
+  font-size: 1.5rem;
+}
+
+/* ============================================================ */
+/* SAUDI HOVER EFFECTS */
+/* ============================================================ */
+
+.hover-gold-glow {
+  transition: all 0.4s ease;
+}
+.hover-gold-glow:hover {
+  box-shadow: var(--shadow-gold);
+  border-color: var(--saudi-gold);
+  transform: translateY(-2px);
+}
+
+.hover-green-glow {
+  transition: all 0.4s ease;
+}
+.hover-green-glow:hover {
+  box-shadow: var(--shadow-green);
+  border-color: var(--saudi-green);
+  transform: translateY(-2px);
+}
+
+/* ============================================================ */
+/* PARALLAX & SCROLL EFFECTS */
+/* ============================================================ */
+
+.parallax-slow {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.parallax-slow:hover {
+  transform: translateY(-4px);
+}
+
+/* ============================================================ */
+/* SAUDI TEXT GRADIENTS */
+/* ============================================================ */
+
+.text-saudi-gold-gradient {
+  background: var(--saudi-gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-saudi-green-gradient {
+  background: var(--saudi-green-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================ */
+/* SAUDI BUTTON STYLES */
+/* ============================================================ */
+
+.btn-saudi-gold {
+  background: var(--saudi-gold-gradient);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: var(--shadow-gold);
+  border: none;
+}
+.btn-saudi-gold:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(201, 168, 76, 0.4);
+}
+
+.btn-saudi-green {
+  background: var(--saudi-green-gradient);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: var(--shadow-green);
+  border: none;
+}
+.btn-saudi-green:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(26, 92, 58, 0.4);
+}
+
+.btn-saudi-outline {
+  background: transparent;
+  color: var(--saudi-green);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid var(--saudi-green);
+}
+.btn-saudi-outline:hover {
+  background: var(--saudi-green);
+  color: white;
+  transform: scale(1.05);
+}
