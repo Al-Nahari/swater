@@ -7,7 +7,12 @@ import JsonLd from '@/components/JsonLd';
 import { localBusinessSchema, webSiteSchema } from '@/lib/seo';
 import { SITE_URL, SITE_NAME } from '@/lib/site';
 import './globals.css';
-
+// app/layout.tsx
+import { Tajawal } from 'next/font/google'
+const tajawal = Tajawal({ 
+  subsets: ['arabic'],
+  weight: ['300', '400', '500', '700', '800', '900']
+})
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
