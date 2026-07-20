@@ -11,6 +11,7 @@ import '@fontsource/cairo/900.css';
 import '@fontsource/jetbrains-mono/500.css';
 import { companyInfo } from '@/lib/data';
 import JsonLd from '@/components/JsonLd';
+import ScrollProgress from '@/components/ScrollProgress';
 import { localBusinessSchema, webSiteSchema } from '@/lib/seo';
 import { SITE_URL, SITE_NAME } from '@/lib/site';
 import './globals.css';
@@ -64,6 +65,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-foreground antialiased font-sans pb-28 md:pb-8">
         <JsonLd data={[localBusinessSchema(), webSiteSchema()]} />
+        <ScrollProgress />
         {children}
       </body>
     </html>

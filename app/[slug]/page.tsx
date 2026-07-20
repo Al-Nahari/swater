@@ -8,6 +8,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ContactButton from '@/components/Contact';
 import GalleryLightbox from '@/components/GalleryLightbox';
+import ProcessSteps from '@/components/ProcessSteps';
+import ComparisonTable from '@/components/ComparisonTable';
 import { mergeServiceGallery } from '@/lib/gallery';
 import {
   breadcrumbSchema,
@@ -15,6 +17,15 @@ import {
   faqPageSchema,
   serviceSchema,
 } from '@/lib/seo';
+
+type ArticleBlock = { heading: string; body: string };
+type ComparisonData = {
+  title: string;
+  leftLabel: string;
+  rightLabel: string;
+  rows: { feature: string; left: string | boolean; right: string | boolean }[];
+};
+type ServiceExtras = { article?: ArticleBlock[]; comparison?: ComparisonData };
 
 export async function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -227,6 +238,46 @@ export default async function Page({
             </div>
           </div>
         </section>
+
+        {/* Process */}
+        <ProcessSteps />
+
+        {/* Comparison table (optional, per-service) */}
+        {(service as unknown as ServiceExtras).comparison && (
+          <section className="py-14 md:py-16 bg-white" aria-labelledby="comparison-heading">
+            <div className="container mx-auto px-4">
+              <h2 id="comparison-heading" className="sr-only">
+                مقارنة {service.shortTitle}
+              </h2>
+              <ComparisonTable {...(service as unknown as ServiceExtras).comparison!} />
+            </div>
+          </section>
+        )}
+
+        {/* Long-form article (optional, per-service) */}
+        {(() => {
+          const article = (service as unknown as ServiceExtras).article;
+          if (!article || article.length === 0) return null;
+          return (
+            <section className="py-14 md:py-16 bg-gradient-desert" aria-labelledby="article-heading">
+              <div className="container mx-auto px-4">
+                <div className="max-w-3xl mx-auto">
+                  <h2 id="article-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center">
+                    دليلك الكامل عن {service.shortTitle} في الرياض
+                  </h2>
+                  <div className="space-y-8">
+                    {article.map((block: ArticleBlock, index: number) => (
+                      <div key={index}>
+                        <h3 className="text-xl font-bold text-foreground mb-3">{block.heading}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{block.body}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Gallery */}
         {galleryImages.length > 0 && (

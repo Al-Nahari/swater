@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic';
 import Footer from '@/components/Footer';
 import ContactButton from '@/components/Contact';
 import ContactSection from '@/components/ContactSection';
+import TrustBadges from '@/components/TrustBadges';
+import ProcessSteps from '@/components/ProcessSteps';
 import { companyInfo } from '@/lib/data';
 import { buildPageMetadata } from '@/lib/seo';
 
@@ -43,7 +45,9 @@ export default function Home() {
       <Header />
       <main id="main-content">
         <Hero />
+        <TrustBadges />
         <Services />
+        <ProcessSteps />
         <Features />
         <Testimonials />
         <ContactSection />

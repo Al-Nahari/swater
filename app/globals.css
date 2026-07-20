@@ -47,6 +47,16 @@
 
   --card-shadow: 0 1px 2px 0 rgb(20 18 31 / 0.06), 0 8px 24px -8px rgb(76 78 245 / 0.15);
   --card-shadow-hover: 0 4px 8px 0 rgb(20 18 31 / 0.08), 0 16px 40px -10px rgb(107 76 224 / 0.28);
+
+  /* ---- توافق مع الأقسام الداخلية القديمة (coffee/desert) ----
+     إعادة تعيين الأسماء القديمة إلى هوية "مسار الشمس" الجديدة بدل
+     تركها بلا تعريف (كانت تُعرض بلا ألوان فعلياً). هذا يوحّد كل
+     صفحات الموقع الداخلية مع تصميم الهيرو الجديد فوراً. */
+  --coffee-light: var(--sun-light);
+  --coffee-medium: var(--dusk);
+  --coffee-dark: var(--indigo);
+  --coffee-espresso: var(--night);
+  --sand-light: var(--canvas-2);
 }
 
 @theme inline {
@@ -78,6 +88,12 @@
   --color-border-dark: var(--border-dark);
   --color-success: var(--success);
   --color-error: var(--error);
+
+  --color-coffee-light: var(--coffee-light);
+  --color-coffee-medium: var(--coffee-medium);
+  --color-coffee-dark: var(--coffee-dark);
+  --color-coffee-espresso: var(--coffee-espresso);
+  --color-sand-light: var(--sand-light);
 
   --font-sans: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', system-ui, sans-serif;
   --font-display: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
@@ -173,6 +189,29 @@ a:focus-visible, button:focus-visible {
 
 /* خط فاصل بتدرج الشمس */
 .gradient-rule { height: 3px; background: var(--gradient-sun); border-radius: 999px; }
+
+/* خلفية فاتحة دافئة للأقسام الداخلية (بديل "الصحراء" القديم) */
+.bg-gradient-desert {
+  background: linear-gradient(160deg, var(--paper) 0%, var(--canvas) 55%, var(--canvas-2) 100%);
+}
+
+.bg-gradient-primary { background: var(--gradient-sun); }
+
+/* شريط تقدّم القراءة أعلى الصفحة */
+.scroll-progress-track {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  height: 3px;
+  z-index: 9998;
+  background: transparent;
+}
+.scroll-progress-bar {
+  height: 100%;
+  background: var(--gradient-sun);
+  transform-origin: right;
+  will-change: transform;
+}
 
 /* ============================== الحركة ============================== */
 

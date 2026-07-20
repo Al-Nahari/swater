@@ -1,0 +1,244 @@
+diff --git a/app/[slug]/page.tsx b/app/[slug]/page.tsx
+index 6c1bc30..3093049 100644
+--- a/app/[slug]/page.tsx
++++ b/app/[slug]/page.tsx
+@@ -8,6 +8,8 @@ import Image from 'next/image';
+ import Link from 'next/link';
+ import ContactButton from '@/components/Contact';
+ import GalleryLightbox from '@/components/GalleryLightbox';
++import ProcessSteps from '@/components/ProcessSteps';
++import ComparisonTable from '@/components/ComparisonTable';
+ import { mergeServiceGallery } from '@/lib/gallery';
+ import {
+   breadcrumbSchema,
+@@ -16,6 +18,15 @@ import {
+   serviceSchema,
+ } from '@/lib/seo';
+ 
++type ArticleBlock = { heading: string; body: string };
++type ComparisonData = {
++  title: string;
++  leftLabel: string;
++  rightLabel: string;
++  rows: { feature: string; left: string | boolean; right: string | boolean }[];
++};
++type ServiceExtras = { article?: ArticleBlock[]; comparison?: ComparisonData };
++
+ export async function generateStaticParams() {
+   return services.map((service) => ({ slug: service.slug }));
+ }
+@@ -228,6 +239,46 @@ export default async function Page({
+           </div>
+         </section>
+ 
++        {/* Process */}
++        <ProcessSteps />
++
++        {/* Comparison table (optional, per-service) */}
++        {(service as unknown as ServiceExtras).comparison && (
++          <section className="py-14 md:py-16 bg-white" aria-labelledby="comparison-heading">
++            <div className="container mx-auto px-4">
++              <h2 id="comparison-heading" className="sr-only">
++                مقارنة {service.shortTitle}
++              </h2>
++              <ComparisonTable {...(service as unknown as ServiceExtras).comparison!} />
++            </div>
++          </section>
++        )}
++
++        {/* Long-form article (optional, per-service) */}
++        {(() => {
++          const article = (service as unknown as ServiceExtras).article;
++          if (!article || article.length === 0) return null;
++          return (
++            <section className="py-14 md:py-16 bg-gradient-desert" aria-labelledby="article-heading">
++              <div className="container mx-auto px-4">
++                <div className="max-w-3xl mx-auto">
++                  <h2 id="article-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center">
++                    دليلك الكامل عن {service.shortTitle} في الرياض
++                  </h2>
++                  <div className="space-y-8">
++                    {article.map((block: ArticleBlock, index: number) => (
++                      <div key={index}>
++                        <h3 className="text-xl font-bold text-foreground mb-3">{block.heading}</h3>
++                        <p className="text-muted-foreground leading-relaxed">{block.body}</p>
++                      </div>
++                    ))}
++                  </div>
++                </div>
++              </div>
++            </section>
++          );
++        })()}
++
+         {/* Gallery */}
+         {galleryImages.length > 0 && (
+           <section className="py-14 md:py-16 bg-white" aria-labelledby="gallery-heading">
+diff --git a/app/globals.css b/app/globals.css
+index 5c1e1c0..b23fa43 100644
+--- a/app/globals.css
++++ b/app/globals.css
+@@ -47,6 +47,16 @@
+ 
+   --card-shadow: 0 1px 2px 0 rgb(20 18 31 / 0.06), 0 8px 24px -8px rgb(76 78 245 / 0.15);
+   --card-shadow-hover: 0 4px 8px 0 rgb(20 18 31 / 0.08), 0 16px 40px -10px rgb(107 76 224 / 0.28);
++
++  /* ---- توافق مع الأقسام الداخلية القديمة (coffee/desert) ----
++     إعادة تعيين الأسماء القديمة إلى هوية "مسار الشمس" الجديدة بدل
++     تركها بلا تعريف (كانت تُعرض بلا ألوان فعلياً). هذا يوحّد كل
++     صفحات الموقع الداخلية مع تصميم الهيرو الجديد فوراً. */
++  --coffee-light: var(--sun-light);
++  --coffee-medium: var(--dusk);
++  --coffee-dark: var(--indigo);
++  --coffee-espresso: var(--night);
++  --sand-light: var(--canvas-2);
+ }
+ 
+ @theme inline {
+@@ -79,6 +89,12 @@
+   --color-success: var(--success);
+   --color-error: var(--error);
+ 
++  --color-coffee-light: var(--coffee-light);
++  --color-coffee-medium: var(--coffee-medium);
++  --color-coffee-dark: var(--coffee-dark);
++  --color-coffee-espresso: var(--coffee-espresso);
++  --color-sand-light: var(--sand-light);
++
+   --font-sans: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', system-ui, sans-serif;
+   --font-display: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+@@ -174,6 +190,29 @@ a:focus-visible, button:focus-visible {
+ /* خط فاصل بتدرج الشمس */
+ .gradient-rule { height: 3px; background: var(--gradient-sun); border-radius: 999px; }
+ 
++/* خلفية فاتحة دافئة للأقسام الداخلية (بديل "الصحراء" القديم) */
++.bg-gradient-desert {
++  background: linear-gradient(160deg, var(--paper) 0%, var(--canvas) 55%, var(--canvas-2) 100%);
++}
++
++.bg-gradient-primary { background: var(--gradient-sun); }
++
++/* شريط تقدّم القراءة أعلى الصفحة */
++.scroll-progress-track {
++  position: fixed;
++  inset-inline: 0;
++  top: 0;
++  height: 3px;
++  z-index: 9998;
++  background: transparent;
++}
++.scroll-progress-bar {
++  height: 100%;
++  background: var(--gradient-sun);
++  transform-origin: right;
++  will-change: transform;
++}
++
+ /* ============================== الحركة ============================== */
+ 
+ @keyframes floatSlow {
+diff --git a/app/layout.tsx b/app/layout.tsx
+index c7fed7f..f428ff0 100644
+--- a/app/layout.tsx
++++ b/app/layout.tsx
+@@ -11,6 +11,7 @@ import '@fontsource/cairo/900.css';
+ import '@fontsource/jetbrains-mono/500.css';
+ import { companyInfo } from '@/lib/data';
+ import JsonLd from '@/components/JsonLd';
++import ScrollProgress from '@/components/ScrollProgress';
+ import { localBusinessSchema, webSiteSchema } from '@/lib/seo';
+ import { SITE_URL, SITE_NAME } from '@/lib/site';
+ import './globals.css';
+@@ -64,6 +65,7 @@ export default function RootLayout({
+       </head>
+       <body className="bg-background text-foreground antialiased font-sans pb-28 md:pb-8">
+         <JsonLd data={[localBusinessSchema(), webSiteSchema()]} />
++        <ScrollProgress />
+         {children}
+       </body>
+     </html>
+diff --git a/app/page.tsx b/app/page.tsx
+index 571d4a5..aef1300 100644
+--- a/app/page.tsx
++++ b/app/page.tsx
+@@ -6,6 +6,8 @@ import dynamic from 'next/dynamic';
+ import Footer from '@/components/Footer';
+ import ContactButton from '@/components/Contact';
+ import ContactSection from '@/components/ContactSection';
++import TrustBadges from '@/components/TrustBadges';
++import ProcessSteps from '@/components/ProcessSteps';
+ import { companyInfo } from '@/lib/data';
+ import { buildPageMetadata } from '@/lib/seo';
+ 
+@@ -43,7 +45,9 @@ export default function Home() {
+       <Header />
+       <main id="main-content">
+         <Hero />
++        <TrustBadges />
+         <Services />
++        <ProcessSteps />
+         <Features />
+         <Testimonials />
+         <ContactSection />
+diff --git a/lib/data.ts b/lib/data.ts
+index a900f67..8a45bbf 100644
+--- a/lib/data.ts
++++ b/lib/data.ts
+@@ -127,6 +127,45 @@ export const services = [
+    alt: "مظلة متحركة للفناء الخارجي"
+  }
+  ],
++ comparison: {
++   title: "مظلات متحركة أم مظلات ثابتة؟ أيهما يناسبك",
++   leftLabel: "مظلة متحركة",
++   rightLabel: "مظلة ثابتة",
++   rows: [
++     { feature: "التحكم بالفتح والإغلاق", left: "أوتوماتيكي بالريموت أو التطبيق", right: "لا يوجد — تصميم دائم" },
++     { feature: "الاستجابة للطقس", left: "مستشعرات رياح ومطر تطوي المظلة تلقائياً", right: "غير متاحة" },
++     { feature: "تعديل زاوية الشمس خلال اليوم", left: true, right: false },
++     { feature: "التكلفة الأولية", left: "أعلى بسبب المحرك ولوحة التحكم", right: "أقل تكلفة نسبياً" },
++     { feature: "الصيانة الدورية", left: "فحص دوري للمحرك والمستشعرات", right: "شبه معدومة" },
++     { feature: "الأنسب لـ", left: "الاستراحات والمسابح والفناء المفتوح", right: "مواقف السيارات والمساحات الثابتة" },
++   ],
++ },
++ article: [
++   {
++     heading: "ما هي المظلات المتحركة ولماذا انتشرت في الرياض؟",
++     body: "المظلات المتحركة هي أنظمة تظليل مزوّدة بمحرك كهربائي يتيح فتحها وإغلاقها بالكامل أو بشكل جزئي حسب الحاجة، عوضاً عن الشكل الثابت التقليدي للمظلة. في مناخ الرياض، حيث تتجاوز درجات الحرارة 45 مئوية صيفاً بينما تشهد المدينة أمطاراً موسمية متقطعة شتاءً، أصبحت هذه الأنظمة خياراً عملياً للفلل والاستراحات والمطاعم لأنها تمنح مرونة لا توفرها المظلة الثابتة: يمكن فتحها بالكامل في المساء لرؤية السماء، إغلاقها جزئياً لتقليل وهج الشمس عند الظهيرة، أو طيّها تلقائياً عند اقتراب عاصفة رملية أو زخة مطر مفاجئة."
++   },
++   {
++     heading: "مكونات نظام المظلة المتحركة",
++     body: "يتكوّن النظام من هيكل معدني (ألومنيوم مطلي أو حديد مجلفن حسب نوع الاستخدام)، وقماش أو ألواح تظليل مقاومة للأشعة فوق البنفسجية، ومحرك كهربائي بمعدل ضوضاء منخفض، ولوحة تحكم تدعم التشغيل عن بعد وأحياناً التطبيقات الذكية. تُضاف مستشعرات اختيارية للرياح والمطر ودرجة الحرارة ترفع من موثوقية النظام لكنها تزيد التكلفة الأولية بنسبة تتراوح عادة بين 10% و20%."
++   },
++   {
++     heading: "أنواع المظلات المتحركة المتوفرة",
++     body: "تنقسم المظلات المتحركة من حيث الشكل الهندسي إلى ثلاثة أنماط رئيسية. الأفقية، وهي الأكثر شيوعاً للجلسات الخارجية والمسابح لأنها توفر تظليلاً مسطحاً متساوياً. المنحدرة، التي تُركّب على ميل بسيط لتصريف مياه الأمطار بسهولة وتُفضَّل في المناطق التي تتلقى أمطاراً أكثر تكراراً. والعمودية أو الجانبية، وتُستخدم كستارة متحركة لحجب الشمس الجانبية أو الرياح دون التأثير على التهوية العلوية."
++   },
++   {
++     heading: "عوامل تحدد سعر المظلة المتحركة في الرياض",
++     body: "يختلف السعر النهائي حسب عدة عوامل تجتمع معاً: مساحة التغطية المطلوبة بالمتر المربع، نوع الخامة (قماش تظليل مستورد مقابل ألواح بولي كربونات)، قوة ونوع المحرك، إضافة المستشعرات الذكية من عدمها، وتعقيد التصميم الإنشائي إذا كانت المظلة تحتاج تدعيمات إضافية. الأنسب دائماً هو طلب معاينة ميدانية مجانية وعرض سعر مكتوب يوضح كل بند بدلاً من الاعتماد على تقدير عام عبر الهاتف، لأن فروقات المساحة والتصميم قد تُغيّر التكلفة بشكل كبير بين موقع وآخر."
++   },
++   {
++     heading: "الصيانة وإطالة عمر النظام",
++     body: "يوصى بفحص دوري كل 6 إلى 12 شهراً يشمل تشحيم المفصلات المتحركة، فحص شد سلك القماش أو الألواح، اختبار استجابة مستشعرات الرياح والمطر، وتنظيف السطح من الأتربة التي تتراكم بسبب العواصف الترابية المتكررة في الرياض. الصيانة المنتظمة تطيل عمر المحرك وتحافظ على سلاسة الحركة وتمنع الأعطال المفاجئة في موسم الصيف الحار."
++   },
++   {
++     heading: "التغطية داخل أحياء الرياض",
++     body: "نغطي تركيب وصيانة المظلات المتحركة في شمال الرياض (حطين، الملقا، النرجس، الياسمين)، وشرق الرياض (النهضة، قرطبة، الرمال)، وجنوب الرياض (العزيزية، الشفا)، وغرب الرياض (ظهرة لبن، عرقة)، إضافة إلى وسط المدينة والمناطق المجاورة. فريق المعاينة يصل خلال نفس اليوم أو اليوم التالي في معظم الأحياء."
++   },
++ ],
+  faq: [
+  {
+    question: "كيف يعمل النظام الأوتوماتيكي؟",
+@@ -136,6 +175,10 @@ export const services = [
+    question: "هل يمكن التحكم اليدوي في حالة عطل النظام؟",
+    answer: "نعم، يوجد نظام يدوي احتياطي يعمل بسهولة"
+  },
++ {
++   question: "هل تناسب المظلة المتحركة مواقف السيارات أم مواقف السيارات الثابتة أفضل؟",
++   answer: "للمواقف الثابتة تُعد المظلة الثابتة عادة الخيار الأكثر اقتصاداً، بينما تناسب المظلة المتحركة الجلسات والمسابح التي تحتاج تحكماً يومياً في مقدار الظل"
++ },
+  {
+    question: "ما هي تكلفة الصيانة السنوية؟",
+    answer: "الصيانة مجانية لمدة سنة واحدة وتكلفتها قليلة جداً بعدها"
