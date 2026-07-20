@@ -27,39 +27,39 @@ export const services = [
  "تركيب احترافي سريع مع ضمان 10 سنوات",
  "صيانة وإصلاح مجاني لمدة سنة واحدة",
  ],
- image: "/newphoto/مضلات مقوسه مواقف.jpg",
+ image: "/newphoto/mdlat_mqwsh_mwaqf.jpg",
  slug: "mazallat-sayarat-riyadh",
  priority: 1,
  regions: ["شمال الرياض", "جنوب الرياض", "شرق الرياض", "غرب الرياض", "وسط الرياض"],
  relatedServices: ["mazallat-mutaharrika-riyadh", "mazallat-haramiya-riyadh", "mazallat-maqousa-riyadh"],
  gallery: [
  {
-   image: "/newphoto/جلاسات خارجيه بتصميم جميل.jpg",
+   image: "/newphoto/jlasat_kharjyh_btsmym_jmyl.jpg",
    description: "مظلة سيارات قماشية عالية الجودة بتصميم عصري",
    alt: "مظلة سيارات احترافية في الرياض"
  },
  {
-   image: "/newphoto/مضلات سيارت..jpg",
+   image: "/newphoto/mdlat_syart_2.jpg",
    description: "تركيب مظلات سيارات متخصص وسريع",
    alt: "عملية تركيب مظلة سيارة بالرياض"
  },
  {
-   image: "/newphoto/مضلات مواقف خارجيه مقواسه.jpg",
+   image: "/newphoto/mdlat_mwaqf_kharjyh_mqwash.jpg",
    description: "تركيب مظلات سيارات متخصص وسريع",
    alt: "عملية تركيب مظلة سيارة بالرياض"
  },
  {
-   image: "/newphoto/مضلات مواقف خارجيه شكل اكس.jpg",
+   image: "/newphoto/mdlat_mwaqf_kharjyh_shkl_aks.jpg",
    description: "تركيب مظلات سيارات متخصص وسريع",
    alt: "عملية تركيب مظلة سيارة بالرياض"
  },
  {
-   image: "/newphoto/مضلات سيارت.jpg",
+   image: "/newphoto/mdlat_syart_3.jpg",
    description: "مظلات سيارات متينة ومقاومة للرياح",
    alt: "مظلة سيارة متينة عالية المواصفات"
  },
  {
-   image: "/newphoto/مضلات ..jpg",
+   image: "/newphoto/mdlat.jpg",
    description: "تصميمات عصرية لمظلات السيارات",
    alt: "تصاميم حديثة لمظلات السيارات"
  },
@@ -100,29 +100,29 @@ export const services = [
  "مناسبة لجميع أحجام المساحات والاستخدامات",
  "تركيب محترف مع ضمان على النظام الميكانيكي والكهربائي",
  ],
- image: "/img/مضلات متحرك.jpg",
+ image: "/img/mdlat_mthrk.jpg",
  slug: "mazallat-mutaharrika-riyadh",
  priority: 1,
  regions: ["شمال الرياض", "جنوب الرياض", "شرق الرياض", "غرب الرياض"],
  relatedServices: ["mazallat-sayarat-riyadh", "mazallat-shad-inshai-riyadh"],
  gallery: [
  {
-   image: "/img/مضلات متحركه ...jpg",
+   image: "/img/mdlat_mthrkh.jpg",
    description: "مظلة متحركة بجودة عالية ونظام أوتوماتيكي",
    alt: "مظلة متحركة احترافية"
  },
  {
-   image: "/img/مضلات متحركه VPN.jpg",
+   image: "/img/mdlat_mthrkh_vpn.jpg",
    description: "مظلات متحركة للمنازل الحديثة",
    alt: "مظلة متحركة للمنزل"
  },
  {
-   image: "/img/مضلات متحركه الرياض..jpg",
+   image: "/img/mdlat_mthrkh_alryad.jpg",
    description: "نظام متحرك سهل الاستخدام بلمسة زر",
    alt: "نظام التحكم الأوتوماتيكي"
  },
  {
-   image: "/img/مضلات متحركه الرياض1.jpg",
+   image: "/img/mdlat_mthrkh_alryad1.jpg",
    description: "مظلات متحركة للمساحات الخارجية الواسعة",
    alt: "مظلة متحركة للفناء الخارجي"
  }
@@ -163,29 +163,29 @@ export const services = [
  "تركيب احترافي سريع مع ضمان طويل الأمد",
  "صيانة سهلة وتنظيف بسيط",
  ],
- image: "/img/مضلات هرميه الرياض.jpg",
+ image: "/img/mdlat_hrmyh_alryad_3.jpg",
  slug: "mazallat-haramiya-riyadh",
  priority: 2,
  regions: ["شمال الرياض", "جنوب الرياض"],
  relatedServices: ["mazallat-sayarat-riyadh", "sawatr-hadid-riyadh"],
  gallery: [
  {
-   image: "/img/خيام الرياض.jpg",
+   image: "/img/khyam_alryad.jpg",
    description: "مظلة هرمية بتصميم جذاب وهندسة دقيقة",
    alt: "مظلة هرمية جميلة"
  },
  {
-   image: "/img/مضلات هرميه الرياض !.jpg",
+   image: "/img/mdlat_hrmyh_alryad.jpg",
    description: "مظلات هرمية للمواقف والساحات",
    alt: "مظلات هرمية للموقف"
  },
  {
-   image: "/img/مضلات هرميه الرياض 1.jpg",
+   image: "/img/mdlat_hrmyh_alryad_1.jpg",
    description: "تصميم هرمي عملي وجميل مع تصريف ممتاز",
    alt: "مظلة هرمية عملية"
  },
  {
-   image: "/img/مضلات هرميه الرياض ب.jpg",
+   image: "/img/mdlat_hrmyh_alryad_b.jpg",
    description: "مظلات هرمية للمساحات الخارجية الواسعة",
    alt: "هيكل هرمي للحديقة"
  }
@@ -222,29 +222,29 @@ export const services = [
  "ضمان على الهيكل والتركيب مع مراجعة دورية",
  "تصاميم عصرية ومخصصة حسب احتياجات العميل",
  ],
- image: "/img/مضلات شد انشائي الرياض.jpg",
+ image: "/img/mdlat_shd_anshaey_alryad_6.jpg",
  slug: "mazallat-shad-inshai-riyadh",
  priority: 1,
  regions: ["شرق الرياض", "جنوب الرياض"],
  relatedServices: ["mazallat-haramiya-riyadh", "hanajer-w-mastoudat-riyadh"],
  gallery: [
  {
-   image: "/img/مضلات شد انشائي الرياض...jpg",
+   image: "/img/mdlat_shd_anshaey_alryad_4.jpg",
    description: "مظلة شد إنشائي بمساحة كبيرة وبدون أعمدة",
    alt: "مظلة شد إنشائي واسعة"
  },
  {
-   image: "/img/مضلات شد انشائي الرياض.jpg",
+   image: "/img/mdlat_shd_anshaey_alryad_6.jpg",
    description: "تصميم شد إنشائي متقدم بدون عوائق",
    alt: "هيكل شد إنشائي نظيف"
  },
  {
-   image: "/img/مضلات شد انشائي الرياض بشكل جميل.jpg",
+   image: "/img/mdlat_shd_anshaey_alryad_bshkl_jmyl_1.jpg",
    description: "مظلات شد إنشائي للمساحات الواسعة جداً",
    alt: "موقف واسع محمي"
  },
  {
-   image: "/img/مضلات شد انشائي الرياض !.jpg",
+   image: "/img/mdlat_shd_anshaey_alryad.jpg",
    description: "تقنية الشد الإنشائي المتقدمة والآمنة",
    alt: "تفاصيل الهيكل الإنشائي"
  }
@@ -281,29 +281,29 @@ export const services = [
  "تركيب احترافي سريع مع ضمان شامل",
  "توافق تام مع العمارة الحديثة والتقليدية",
  ],
- image: "/img/مضلات مقوسه الرياض.jpg",
+ image: "/img/mdlat_mqwsh_alryad_2.jpg",
  slug: "mazallat-maqousa-riyadh",
  priority: 2,
  regions: ["وسط الرياض", "شمال الرياض"],
  relatedServices: ["mazallat-sayarat-riyadh", "jalsat-borjolat-riyadh"],
  gallery: [
  {
-   image: "/img/مضلات مقوسه الرياض ،.jpg",
+   image: "/img/mdlat_mqwsh_alryad.jpg",
    description: "مظلة مقوسة بتصميم أنيق وحديث",
    alt: "مظلة مقوسة جميلة"
  },
  {
-   image: "/img/مضلات مقوسه الرياض مواقف..jpg",
+   image: "/img/mdlat_mqwsh_alryad_mwaqf_1.jpg",
    description: "مظلات مقوسة للمنازل والفيلات",
    alt: "مظلة مقوسة منزلية"
  },
  {
-   image: "/img/مضلات مقوسه الرياض جميله..jpg",
+   image: "/img/mdlat_mqwsh_alryad_jmylh.jpg",
    description: "تصميم مقوس للمساحات الخارجية الجميلة",
    alt: "فناء بمظلة مقوسة"
  },
  {
-   image: "/img/مضلات مقوسه الرياض مواقف...jpg",
+   image: "/img/mdlat_mqwsh_alryad_mwaqf.jpg",
    description: "مظلات مقوسة للمباني التجارية والفنادق",
    alt: "مظلة مقوسة لمبنى تجاري"
  }
@@ -336,29 +336,29 @@ export const services = [
  "ضمان شامل على التركيب والمواد",
  "استشارات مجانية وتصاميم مخصصة",
  ],
- image: "/img/مضلات شد انشائي الرياض مدارس .jpg",
+ image: "/img/mdlat_shd_anshaey_alryad_mdars.jpg",
  slug: "mazallat-madaris-riyadh",
  priority: 2,
  regions: ["جميع مناطق الرياض"],
  relatedServices: ["mazallat-masabi-riyadh", "jalsat-borjolat-riyadh"],
  gallery: [
  {
-   image: "/img/مضلات مدارس الرياض.jpg",
+   image: "/img/mdlat_mdars_alryad.jpg",
    description: "مظلة مدرسية كبيرة لساحة اللعب",
    alt: "مظلة ساحة مدرسة"
  },
  {
-   image: "/img/مضلات مدارس بشكل جميل.jpg",
+   image: "/img/mdlat_mdars_bshkl_jmyl.jpg",
    description: "مظلات مدارس آمنة وقوية للطلاب",
    alt: "مظلات مدرسية"
  },
  {
-   image: "/img/مضلات مدارس بشكل رائغ.jpg",
+   image: "/img/mdlat_mdars_bshkl_raegh.jpg",
    description: "تركيب مظلات للمدارس والجامعات",
    alt: "تركيب مظلة مدرسية"
  },
  {
-   image: "/img/مضلات شد انشائي الرياض مدارس .jpg",
+   image: "/img/mdlat_shd_anshaey_alryad_mdars.jpg",
    description: "مظلات مناطق اللعب والفسح في المدارس",
    alt: "منطقة لعب محمية"
  }
@@ -395,29 +395,29 @@ export const services = [
  "سهولة التنظيف والصيانة والتعقيم",
  "ضمان على المواد والتركيب",
  ],
- image: "/img/مضلات تضليل قعدات مسابح.jpg",
+ image: "/img/mdlat_tdlyl_qadat_msabh.jpg",
  slug: "mazallat-masabi-riyadh",
  priority: 2,
  regions: ["وسط الرياض", "شمال الرياض", "جنوب الرياض"],
  relatedServices: ["mazallat-madaris-riyadh", "tansiq-hadaiq-riyadh"],
  gallery: [
  {
-   image: "/img/مضلات مسابح 2.jpg",
+   image: "/img/mdlat_msabh_2.jpg",
    description: "مظلة مسبح بتهوية ممتازة وحماية من الشمس",
    alt: "مظلة مسبح عالية الجودة"
  },
  {
-   image: "/img/مضلات مسابح الرياض2.jpg",
+   image: "/img/mdlat_msabh_alryad2.jpg",
    description: "مظلات مسابح خاصة للفيلات",
    alt: "مسبح خاص محمي"
  },
  {
-   image: "/img/مضلات مسابح جميله هرميه.jpg",
+   image: "/img/mdlat_msabh_jmylh_hrmyh.jpg",
    description: "مظلة مسبح عائلية بتصميم جميل",
    alt: "مسبح عائلي محمي"
  },
  {
-   image: "/img/مضلات مسابح جميله.jpg",
+   image: "/img/mdlat_msabh_jmylh.jpg",
    description: "تصميم جذاب لمظلات المسابح",
    alt: "مظلة مسبح أنيقة"
  }
@@ -456,29 +456,29 @@ export const services = [
  "تركيب محكم وآمن مع ضمان شامل",
  "خيارات تصاميم متعددة حسب الاحتياجات",
  ],
- image: "/newphoto/ساتر حديد تغطيه كامله.jpg",
+ image: "/newphoto/satr_hdyd_tghtyh_kamlh.jpg",
  slug: "sawatr-hadid-riyadh",
  priority: 1,
  regions: ["جميع مناطق الرياض"],
  relatedServices: ["sawatr-laser-riyadh", "hanajer-w-mastoudat-riyadh"],
  gallery: [
  {
-   image: "/newphoto/سواتر .jpg",
+   image: "/newphoto/swatr.jpg",
    description: "سواتر حديدية قوية للمساحات الكبيرة",
    alt: "سواتر حديد ضخمة"
  },
  {
-   image: "/newphoto/سواتر حديد جميله.jpg",
+   image: "/newphoto/swatr_hdyd_jmylh.jpg",
    description: "هيكل حديدي مجلفن عالي الجودة",
    alt: "هيكل حديدي محترف"
  },
  {
-   image: "/newphoto/سواتر حديد.jpg",
+   image: "/newphoto/swatr_hdyd.jpg",
    description: "سواتر حديدية للمستودعات والمنشآت",
    alt: "ساتر حديدي صناعي"
  },
  {
-   image: "/img/سواتر لكسان.jpg",
+   image: "/img/swatr_lksan.jpg",
    description: "تركيب سواتر حديدية احترافي",
    alt: "عملية تركيب ساتر حديدي"
  }
@@ -515,29 +515,29 @@ export const services = [
  "ضمان على الجودة والتصميم والتركيب",
  "تصاميم فريدة لا تتكرر",
  ],
- image: "/img/سواتر ليزر حمايه خارجيه بشكل جميل.jpg",
+ image: "/img/swatr_lyzr_hmayh_kharjyh_bshkl_jmyl.jpg",
  slug: "sawatr-laser-riyadh",
  priority: 1,
  regions: ["وسط الرياض", "شمال الرياض"],
  relatedServices: ["sawatr-hadid-riyadh", "jalsat-borjolat-riyadh"],
  gallery: [
  {
-   image: "/img/سواتر ليزر حمايه خارجيه..jpg",
+   image: "/img/swatr_lyzr_hmayh_kharjyh.jpg",
    description: "سواتر ليزر بتصميم دقيق وفني",
    alt: "ساتر ليزر فني جميل"
  },
  {
-   image: "/img/سواتر ليزر حمايه.jpg",
+   image: "/img/swatr_lyzr_hmayh.jpg",
    description: "تصاميم معقدة بقطع الليزر المتقدم",
    alt: "تصميم ليزر معقد"
  },
  {
-   image: "/img/سواتر ليزر معا لكسان.jpg",
+   image: "/img/swatr_lyzr_maa_lksan.jpg",
    description: "سواتر ليزر للمساحات السكنية الحديثة",
    alt: "ساتر ليزر سكني"
  },
  {
-   image: "/img/سواتر ليزر حمايه خارجيه.jpg",
+   image: "/img/swatr_lyzr_hmayh_kharjyh_1.jpg",
    description: "تقنية الليزر المتقدمة والدقيقة جداً",
    alt: "تفاصيل دقيقة للساتر"
  }
@@ -574,29 +574,29 @@ export const services = [
  "سهولة التنظيف والصيانة الدورية",
  "مرونة في التعديل والتحديث",
  ],
- image: "/img/سواتر قماش.jpg",
+ image: "/img/swatr_qmash_2.jpg",
  slug: "sawatr-qumash-riyadh",
  priority: 2,
  regions: ["وسط الرياض", "شمال الرياض", "جنوب الرياض"],
  relatedServices: ["sawatr-plastic-riyadh", "jalsat-borjolat-riyadh"],
  gallery: [
  {
-   image: "/img/سواتر قماش  استراحات.jpg",
+   image: "/img/swatr_qmash_astrahat.jpg",
    description: "سواتر قماش بتهوية ممتازة",
    alt: "ساتر قماشي مريح"
  },
  {
-   image: "/img/سواتر قماش .jpg",
+   image: "/img/swatr_qmash_1.jpg",
    description: "سواتر قماش للمساحات السكنية والفيلات",
    alt: "ساتر قماش منزلي"
  },
  {
-   image: "/img/سواتر قماش ..jpg",
+   image: "/img/swatr_qmash.jpg",
    description: "سواتر قماش مرنة وجميلة",
    alt: "ساتر قماش جميل"
  },
  {
-   image: "/img/سواتر قماش 0.jpg",
+   image: "/img/swatr_qmash_0.jpg",
    description: "تركيب سواتر قماش سريع واحترافي",
    alt: "عملية تركيب ساتر قماش"
  }
@@ -633,29 +633,29 @@ export const services = [
  "تركيب سريع وسهل وآمن",
  "متانة عالية طويلة الأمد",
  ],
- image: "/img/برجوله الرياض بديل الخشب .jpg",
+ image: "/img/brjwlh_alryad_bdyl_alkhshb.jpg",
  slug: "sawatr-plastic-riyadh",
  priority: 2,
  regions: ["جميع مناطق الرياض"],
  relatedServices: ["sawatr-qumash-riyadh", "tansiq-hadaiq-riyadh"],
  gallery: [
  {
-   image: "/img/سواتر بديل الخشب....jpg",
+   image: "/img/swatr_bdyl_alkhshb.jpg",
    description: "سواتر بلاستيك بيضاء عصرية وحديثة",
    alt: "ساتر بلاستيك أبيض"
  },
  {
-   image: "/img/سواتر بلاستيك حجب النضر.jpg",
+   image: "/img/swatr_blastyk_hjb_alndr.jpg",
    description: "سواتر بلاستيك للمساحات السكنية",
    alt: "ساتر بلاستيك منزلي"
  },
  {
-   image: "/img/سواتر بلاستيك.jpg",
+   image: "/img/swatr_blastyk.jpg",
    description: "ألوان متعددة من سواتر البلاستيك",
    alt: "سواتر ملونة"
  },
  {
-   image: "/img/سواتر بلاستيك12.jpg",
+   image: "/img/swatr_blastyk12.jpg",
    description: "سواتر بلاستيك سهلة التنظيف جداً",
    alt: "ساتر بلاستيك نظيف"
  }
@@ -751,29 +751,29 @@ export const services = [
  "صيانة دورية واحترافية",
  "استشارات تصميم مجانية",
  ],
- image: "/img/تنسيق حدائيق الرياض ..jpg",
+ image: "/img/tnsyq_hdaeyq_alryad.jpg",
  slug: "tansiq-hadaiq-riyadh",
  priority: 3,
  regions: ["جميع مناطق الرياض"],
  relatedServices: ["jalsat-borjolat-riyadh", "mazallat-masabi-riyadh"],
  gallery: [
  {
-   image: "/img/تنسيق حدائيق الرياض'.jpg",
+   image: "/img/tnsyq_hdaeyq_alryad_1.jpg",
    description: "تنسيق حدائق منزلية جميلة وخضراء",
    alt: "حديقة منزلية جميلة"
  },
  {
-   image: "/img/تنسيق حدائيق الرياض4.jpg",
+   image: "/img/tnsyq_hdaeyq_alryad4.jpg",
    description: "تصميم حدائق عصرية وحديثة",
    alt: "حديقة عصرية"
  },
  {
-   image: "/img/تنسيق حدائيق الرياض...jpg",
+   image: "/img/tnsyq_hdaeyq_alryad_2.jpg",
    description: "حدائق الشركات والمباني التجارية",
    alt: "حديقة شركة"
  },
  {
-   image: "/img/تنسيق حدائيق الرياض؟.jpg",
+   image: "/img/tnsyq_hdaeyq_alryad_4.jpg",
    description: "تنسيق المساحات الخضراء الكبيرة",
    alt: "مساحة خضراء واسعة"
  }
@@ -810,29 +810,29 @@ export const services = [
  "متانة عالية وصيانة سهلة جداً",
  "توفير الطاقة الكهربائية للتكييف",
  ],
- image: "/img/سندوش بنل الرياض.jpg",
+ image: "/img/sndwsh_bnl_alryad_7.jpg",
  slug: "ghoraf-sandwich-panel-riyadh",
  priority: 3,
  regions: ["وسط الرياض", "جنوب الرياض"],
  relatedServices: ["asatih-sandwich-panel-riyadh", "hanajer-w-mastoudat-riyadh"],
  gallery: [
  {
-   image: "/img/سندوش بنل الرياض غرف.jpg",
+   image: "/img/sndwsh_bnl_alryad_ghrf.jpg",
    description: "غرفة ساندويش بنل للمكتب",
    alt: "غرفة مكتب عازلة"
  },
  {
-   image: "/img/سندوش بنل الرياض..jpg",
+   image: "/img/sndwsh_bnl_alryad_6.jpg",
    description: "غرف عازلة عالية الجودة والكفاءة",
    alt: "غرفة عزل جودة"
  },
  {
-   image: "/img/سندوش بنل الرياض غرف.jpg",
+   image: "/img/sndwsh_bnl_alryad_ghrf.jpg",
    description: "تصميم غرم ساندويش بنل حديث",
    alt: "تصميم غرفة"
  },
  {
-   image: "/img/سندوش بنل الرياض.jpg",
+   image: "/img/sndwsh_bnl_alryad_7.jpg",
    description: "غرم ساندويش بنل للمستودعات",
    alt: "غرفة مستودع"
  }
@@ -865,24 +865,24 @@ export const services = [
  "تركيب سريع وآمن مع ضمان",
  "أساسات قوية وهياكل معدنية",
  ],
- image: "/img/هناجر الرياض.jpg",
+ image: "/img/hnajr_alryad_1.jpg",
  slug: "hanajer-w-mastoudat-riyadh",
  priority: 3,
  regions: ["شرق الرياض", "جنوب الرياض"],
  relatedServices: ["sawatr-hadid-riyadh", "ghoraf-sandwich-panel-riyadh"],
  gallery: [
  {
-   image: "/img/مستودعات الرياض.....jpg",
+   image: "/img/mstwdaat_alryad_1.jpg",
    description: "هناجر ومستودعات صناعية كبيرة",
    alt: "هنجر صناعي كبير"
  },
  {
-   image: "/img/هناجر الرياض.jpg",
+   image: "/img/hnajr_alryad_1.jpg",
    description: "تصميم هناجر عملي وقوي",
    alt: "تصميم هنجر"
  },
  {
-   image: "/img/مستودعات الرياض ..png",
+   image: "/img/mstwdaat_alryad.png",
    description: "هناجر للمواد والمعدات",
    alt: "هنجر تخزين"
  }
@@ -919,59 +919,59 @@ export const services = [
  "ضمان شامل على التركيب والمواد",
  "تصميمات داخلية فاخرة ومريحة",
  ],
- image: "/img/بيوت شعر الرياض بشكل جميل.jpg",
+ image: "/img/bywt_shar_alryad_bshkl_jmyl_1.jpg",
  slug: "buyut-sha3r-riyadh",
  priority: 3,
  regions: ["جميع مناطق الرياض"],
  relatedServices: ["jalsat-borjolat-riyadh", "tansiq-hadaiq-riyadh"],
  gallery: [
  {
-   image: "/img/بيوت شعر الرياض ...jpg",
+   image: "/img/bywt_shar_alryad.jpg",
    description: "بيت شعر بتصميم عصري وفخم",
    alt: "خيمة فخمة حديثة"
  },
  {
-   image: "/img/بيوت شعر الرياض 5.jpg",
+   image: "/img/bywt_shar_alryad_5.jpg",
    description: "بيوت شعر متميزة وعالية الجودة",
    alt: "خيمة متميزة"
  },
  {
-   image: "/img/بيوت شعر الرياض بشكل جميل.jpg",
+   image: "/img/bywt_shar_alryad_bshkl_jmyl_1.jpg",
    description: "بيت شعر فاخر وأنيق",
    alt: "خيمة فاخرة"
  },
  {
-   image: "/img/بيوت شعر الرياض ^.jpg",
+   image: "/img/bywt_shar_alryad_2.jpg",
    description: "مساحة معيشة مريحة وجميلة",
    alt: "مساحة معيشة"
  },
  {
-   image: "/img/بيوت شعر الرياض بشكل جميل..jpg",
+   image: "/img/bywt_shar_alryad_bshkl_jmyl.jpg",
    description: "تصميم عملي وفخم",
    alt: "تصميم عملي"
  },
  {
-   image: "/img/بيوت شعر الرياض ..jpg",
+   image: "/img/bywt_shar_alryad_1.jpg",
    description: "بيت شعر أنيق وراقي",
    alt: "خيمة أنيقة"
  },
  {
-   image: "/img/بيوت شعر الرياض خارجيه.jpg",
+   image: "/img/bywt_shar_alryad_kharjyh.jpg",
    description: "ديكور داخلي مريح وفاخر",
    alt: "ديكور داخلي"
  },
  {
-   image: "/img/بيوت شعر الرياض9.jpg",
+   image: "/img/bywt_shar_alryad9.jpg",
    description: "تفاصيل عالية الجودة والدقة",
    alt: "تفاصيل دقيقة"
  },
  {
-   image: "/img/بيوت شعر الرياض_ .jpg",
+   image: "/img/bywt_shar_alryad_3.jpg",
    description: "تصميم مبتكر وفريد",
    alt: "تصميم فريد"
  },
  {
-   image: "/img/بيوت شعر الرياض،.jpg",
+   image: "/img/bywt_shar_alryad_4.jpg",
    description: "بيت شعر مكتمل وجاهز",
    alt: "خيمة مكتملة"
  }
@@ -1008,49 +1008,49 @@ export const services = [
  "متانة عالية طويلة الأمد جداً",
  "توفير الطاقة الكهربائية 40-50%",
  ],
- image: "/img/سندوش بنل الرياض ،،.jpg",
+ image: "/img/sndwsh_bnl_alryad.jpg",
  slug: "asatih-sandwich-panel-riyadh",
  priority: 3,
  regions: ["جميع مناطق الرياض"],
  relatedServices: ["ghoraf-sandwich-panel-riyadh", "qaramid-riyadh"],
  gallery: [
  {
-   image: "/img/سندوش بنل الرياض#.jpg",
+   image: "/img/sndwsh_bnl_alryad_1.jpg",
    description: "سطح ساندويش بنل عازل قوي",
    alt: "سطح عازل"
  },
  {
-   image: "/img/سندوش بنل الرياض..jpg",
+   image: "/img/sndwsh_bnl_alryad_6.jpg",
    description: "عزل حراري ممتاز وقوي",
    alt: "عزل حراري"
  },
  {
-   image: "/img/سندوش بنل الرياض$.jpg",
+   image: "/img/sndwsh_bnl_alryad_2.jpg",
    description: "تركيب أسطح ساندويش بنل",
    alt: "عملية تركيب"
  },
  {
-   image: "/img/سندوش بنل الرياض.jpg",
+   image: "/img/sndwsh_bnl_alryad_7.jpg",
    description: "سطح مقاوم للعوامل الجوية",
    alt: "سطح مقاوم"
  },
  {
-   image: "/img/سندوش بنل الرياض&.jpg",
+   image: "/img/sndwsh_bnl_alryad_3.jpg",
    description: "عزل صوتي وحراري",
    alt: "عزل صوتي"
  },
  {
-   image: "/img/سندوش بنل الرياض'.jpg",
+   image: "/img/sndwsh_bnl_alryad_4.jpg",
    description: "تصميم عملي وجميل",
    alt: "تصميم جميل"
  },
  {
-   image: "/img/سندوش بنل الرياض...jpg",
+   image: "/img/sndwsh_bnl_alryad_5.jpg",
    description: "سطح ساندويش بنل للمبنى",
    alt: "سطح المبنى"
  },
  {
-   image: "/img/سندوش بنل الرياض0.jpg",
+   image: "/img/sndwsh_bnl_alryad0.jpg",
    description: "حماية الأسطح من جميع الجوانب",
    alt: "حماية السطح"
  }
@@ -1095,24 +1095,24 @@ export const services = [
  "تركيب احترافي مع ضمان",
  "صيانة دورية متاحة",
  ],
- image: "/img/قرميد الرياض..jpg",
+ image: "/img/qrmyd_alryad_3.jpg",
  slug: "qaramid-riyadh",
  priority: 2,
  regions: ["جميع مناطق الرياض"],
  relatedServices: ["asatih-sandwich-panel-riyadh", "ghoraf-sandwich-panel-riyadh"],
  gallery: [
  {
-   image: "/img/قراميد الرياض.jpg",
+   image: "/img/qramyd_alryad.jpg",
    description: "تركيب قرميد بجودة عالية",
    alt: "قرميد للأسطح في الرياض",
  },
  {
-   image: "/img/قرميد الرياض ،.jpg",
+   image: "/img/qrmyd_alryad_1.jpg",
    description: "قرميد بتصميم كلاسيكي",
    alt: "قرميد كلاسيكي",
  },
  {
-   image: "/img/قرميد الرياض..jpg",
+   image: "/img/qrmyd_alryad_3.jpg",
    description: "مشروع قرميد منفذ",
    alt: "تركيب قرميد في الرياض",
  },

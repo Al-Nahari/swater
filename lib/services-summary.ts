@@ -13,7 +13,7 @@ export const services = [
       "خيارات متعددة: ثابتة، متحركة، مقوسة، هرمية",
       "تركيب احترافي مع ضمان شامل",
     ],
-    image: "/newphoto/مضلات سيارات .jpg",
+    image: "/newphoto/mdlat_syarat_1.jpg",
     slug: "mazallat-sayarat-riyadh",
   },
   {
@@ -29,7 +29,7 @@ export const services = [
       "مناسبة لجميع المساحات",
       "تركيب محترف مع ضمان على النظام الميكانيكي",
     ],
-    image: "/img/مضلات متحرك.jpg",
+    image: "/img/mdlat_mthrk.jpg",
     slug: "mazallat-mutaharrika-riyadh",
   },
   {
@@ -45,7 +45,7 @@ export const services = [
       "خامات عالية الجودة",
       "تركيب احترافي مع ضمان",
     ],
-    image: "/img/مضلات هرميه الرياض.jpg",
+    image: "/img/mdlat_hrmyh_alryad_3.jpg",
     slug: "mazallat-haramiya-riyadh",
   },
   {
@@ -61,7 +61,7 @@ export const services = [
       "سهولة الصيانة والتنظيف",
       "ضمان على الهيكل والتركيب",
     ],
-    image: "/img/مضلات شد انشائي الرياض.jpg",
+    image: "/img/mdlat_shd_anshaey_alryad_6.jpg",
     slug: "mazallat-shad-inshai-riyadh",
   },
   {
@@ -77,7 +77,7 @@ export const services = [
       "خامات عالية الجودة",
       "تركيب احترافي مع ضمان",
     ],
-    image: "/img/مضلات مقوسه الرياض.jpg",
+    image: "/img/mdlat_mqwsh_alryad_2.jpg",
     slug: "mazallat-maqousa-riyadh",
   },
   {
@@ -93,7 +93,7 @@ export const services = [
       "سهولة الصيانة والتنظيف",
       "ضمان على التركيب والمواد",
     ],
-    image: "/img/مضلات مدارس الرياض.jpg",
+    image: "/img/mdlat_mdars_alryad.jpg",
     slug: "mazallat-madaris-riyadh",
   },
   {
@@ -109,7 +109,7 @@ export const services = [
       "تصميمات جمالية تزيد من جمال المسابح",
       "سهولة التنظيف والصيانة",
     ],
-    image: "/img/مضلات مسابح جميله.jpg",
+    image: "/img/mdlat_msabh_jmylh.jpg",
     slug: "mazallat-masabi-riyadh",
   },
   {
@@ -125,7 +125,7 @@ export const services = [
       "متانة طويلة الأمد",
       "تركيب محكم مع ضمان",
     ],
-    image: "/newphoto/سواتر حديد.jpg",
+    image: "/newphoto/swatr_hdyd.jpg",
     slug: "sawatr-hadid-riyadh",
   },
   {
@@ -141,7 +141,7 @@ export const services = [
       "سهولة التركيب",
       "ضمان على الجودة والتصميم",
     ],
-    image: "/img/سواتر ليزر حمايه.jpg",
+    image: "/img/swatr_lyzr_hmayh.jpg",
     slug: "sawatr-laser-riyadh",
   },
   {
@@ -157,7 +157,7 @@ export const services = [
       "تصاميم وألوان متعددة",
       "سهولة التنظيف والصيانة",
     ],
-    image: "/img/سواتر قماش.jpg",
+    image: "/img/swatr_qmash_2.jpg",
     slug: "sawatr-qumash-riyadh",
   },
   {
@@ -173,7 +173,7 @@ export const services = [
       "تكلفة مناسبة",
       "تركيب سريع وسهل",
     ],
-    image: "/img/سواتر بلاستيك.jpg",
+    image: "/img/swatr_blastyk.jpg",
     slug: "sawatr-plastic-riyadh",
   },
   {
@@ -189,7 +189,7 @@ export const services = [
       "مناسبة للحدائق والشرفات",
       "تركيب احترافي مع ضمان",
     ],
-    image: "/newphoto/جلسات خارجيه.jpg",
+    image: "/newphoto/jlsat_kharjyh.jpg",
     slug: "jalsat-borjolat-riyadh",
   },
   {
@@ -205,7 +205,7 @@ export const services = [
       "صيانة دورية",
       "استشارات تصميم مجانية",
     ],
-    image: "/img/تنسيق حدائيق.jpg",
+    image: "/img/tnsyq_hdaeyq.jpg",
     slug: "tansiq-hadaiq-riyadh",
   },
   {
@@ -221,7 +221,7 @@ export const services = [
       "مناسبة للاستخدامات السكنية والتجارية",
       "متانة عالية وصيانة سهلة",
     ],
-    image: "/img/سندوش بنل الرياض.jpg",
+    image: "/img/sndwsh_bnl_alryad_7.jpg",
     slug: "ghoraf-sandwich-panel-riyadh",
   },
   {
@@ -237,7 +237,7 @@ export const services = [
       "سهولة التركيب",
       "خيارات ألوان متعددة",
     ],
-    image: "/img/قرميد الرياض..jpg",
+    image: "/img/qrmyd_alryad_3.jpg",
     slug: "qaramid-riyadh",
   },
   {
@@ -253,7 +253,7 @@ export const services = [
       "أبواب وأقفال آمنة",
       "تركيب سريع وضمان",
     ],
-    image: "/img/هناجر الرياض.jpg",
+    image: "/img/hnajr_alryad_1.jpg",
     slug: "hanajer-w-mastoudat-riyadh",
   },
   {
@@ -269,7 +269,7 @@ export const services = [
       "إمكانية التخصيص حسب الطلب",
       "ضمان شامل على التركيب والمواد",
     ],
-    image: "/img/بيوت شعر الرياض بشكل جميل.jpg",
+    image: "/img/bywt_shar_alryad_bshkl_jmyl_1.jpg",
     slug: "buyut-sha3r-riyadh",
   },
   {
@@ -285,7 +285,7 @@ export const services = [
       "مناسبة للاستخدامات السكنية والتجارية",
       "متانة عالية وصيانة سهلة",
     ],
-    image: "/img/سندوش بنل الرياض1.jpg",
+    image: "/img/sndwsh_bnl_alryad1.jpg",
     slug: "asatih-sandwich-panel-riyadh",
   },
 ];

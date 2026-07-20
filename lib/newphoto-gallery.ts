@@ -57,408 +57,408 @@ export const newPhotoGallery: (GalleryImage & { slug: string; filename: string }
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "برجولات جلسات خارجيه.jpg",
-    "image": "/newphoto/برجولات جلسات خارجيه.jpg",
+    "filename": "brjwlat_jlsat_kharjyh.jpg",
+    "image": "/newphoto/brjwlat_jlsat_kharjyh.jpg",
     "description": "برجولات جلسات خارجيه",
     "alt": "تركيب برجولات جلسات خارجيه في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "برجولان جلسات خارجيه.jpg",
-    "image": "/newphoto/برجولان جلسات خارجيه.jpg",
+    "filename": "brjwlan_jlsat_kharjyh.jpg",
+    "image": "/newphoto/brjwlan_jlsat_kharjyh.jpg",
     "description": "برجولان جلسات خارجيه",
     "alt": "تركيب برجولان جلسات خارجيه في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "برجوله جلسات خارجيه بتنسيق حدائق جميل.jpg",
-    "image": "/newphoto/برجوله جلسات خارجيه بتنسيق حدائق جميل.jpg",
+    "filename": "brjwlh_jlsat_kharjyh_btnsyq_hdaeq_jmyl.jpg",
+    "image": "/newphoto/brjwlh_jlsat_kharjyh_btnsyq_hdaeq_jmyl.jpg",
     "description": "برجوله جلسات خارجيه بتنسيق حدائق جميل",
     "alt": "تركيب برجوله جلسات خارجيه بتنسيق حدائق جميل في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "تضليل ممرات....jpg",
-    "image": "/newphoto/تضليل ممرات....jpg",
+    "filename": "tdlyl_mmrat.jpg",
+    "image": "/newphoto/tdlyl_mmrat.jpg",
     "description": "تضليل ممرات",
     "alt": "تركيب تضليل ممرات في الرياض — مظلات ممرات",
     "type": "مظلات ممرات",
     "slug": "mazallat-maqousa-riyadh"
   },
   {
-    "filename": "تنسيق جلسات حدائق.jpg",
-    "image": "/newphoto/تنسيق جلسات حدائق.jpg",
+    "filename": "tnsyq_jlsat_hdaeq.jpg",
+    "image": "/newphoto/tnsyq_jlsat_hdaeq.jpg",
     "description": "تنسيق جلسات حدائق",
     "alt": "تركيب تنسيق جلسات حدائق في الرياض — جلسات خارجية",
     "type": "جلسات خارجية",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "تنسيق جلسات خارجيه بحدائق.jpg",
-    "image": "/newphoto/تنسيق جلسات خارجيه بحدائق.jpg",
+    "filename": "tnsyq_jlsat_kharjyh_bhdaeq.jpg",
+    "image": "/newphoto/tnsyq_jlsat_kharjyh_bhdaeq.jpg",
     "description": "تنسيق جلسات خارجيه بحدائق",
     "alt": "تركيب تنسيق جلسات خارجيه بحدائق في الرياض — جلسات خارجية",
     "type": "جلسات خارجية",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "تنسيق حدايق.jpg",
-    "image": "/newphoto/تنسيق حدايق.jpg",
+    "filename": "tnsyq_hdayq.jpg",
+    "image": "/newphoto/tnsyq_hdayq.jpg",
     "description": "تنسيق حدائق",
     "alt": "تركيب تنسيق حدائق في الرياض — تنسيق حدائق",
     "type": "تنسيق حدائق",
     "slug": "tansiq-hadaiq-riyadh"
   },
   {
-    "filename": "جلاسات خارجيه بتصميم جميل.jpg",
-    "image": "/newphoto/جلاسات خارجيه بتصميم جميل.jpg",
+    "filename": "jlasat_kharjyh_btsmym_jmyl.jpg",
+    "image": "/newphoto/jlasat_kharjyh_btsmym_jmyl.jpg",
     "description": "جلاسات خارجيه بتصميم جميل",
     "alt": "تركيب جلاسات خارجيه بتصميم جميل في الرياض — أعمالنا",
     "type": "أعمالنا",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "جلسات .jpg",
-    "image": "/newphoto/جلسات .jpg",
+    "filename": "jlsat.jpg",
+    "image": "/newphoto/jlsat.jpg",
     "description": "جلسات",
     "alt": "تركيب جلسات في الرياض — جلسات خارجية",
     "type": "جلسات خارجية",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "جلسات خارجه برجولاتت.jpg",
-    "image": "/newphoto/جلسات خارجه برجولاتت.jpg",
+    "filename": "jlsat_kharjh_brjwlatt.jpg",
+    "image": "/newphoto/jlsat_kharjh_brjwlatt.jpg",
     "description": "جلسات خارجية برجولاتت",
     "alt": "تركيب جلسات خارجية برجولاتت في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "جلسات خارجيه برجولات بتنسيق جميل.jpg",
-    "image": "/newphoto/جلسات خارجيه برجولات بتنسيق جميل.jpg",
+    "filename": "jlsat_kharjyh_brjwlat_btnsyq_jmyl.jpg",
+    "image": "/newphoto/jlsat_kharjyh_brjwlat_btnsyq_jmyl.jpg",
     "description": "جلسات خارجيه برجولات بتنسيق جميل",
     "alt": "تركيب جلسات خارجيه برجولات بتنسيق جميل في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "جلسات خارجيه برجولات بتنسيق حدائق.jpg",
-    "image": "/newphoto/جلسات خارجيه برجولات بتنسيق حدائق.jpg",
+    "filename": "jlsat_kharjyh_brjwlat_btnsyq_hdaeq.jpg",
+    "image": "/newphoto/jlsat_kharjyh_brjwlat_btnsyq_hdaeq.jpg",
     "description": "جلسات خارجيه برجولات بتنسيق حدائق",
     "alt": "تركيب جلسات خارجيه برجولات بتنسيق حدائق في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "جلسات خارجيه برجوله وتنسيق1.jpg",
-    "image": "/newphoto/جلسات خارجيه برجوله وتنسيق1.jpg",
+    "filename": "jlsat_kharjyh_brjwlh_wtnsyq1.jpg",
+    "image": "/newphoto/jlsat_kharjyh_brjwlh_wtnsyq1.jpg",
     "description": "جلسات خارجيه برجوله وتنسيق1",
     "alt": "تركيب جلسات خارجيه برجوله وتنسيق1 في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "جلسات خارجيه على اسطح المنزل.jpg",
-    "image": "/newphoto/جلسات خارجيه على اسطح المنزل.jpg",
+    "filename": "jlsat_kharjyh_ala_asth_almnzl.jpg",
+    "image": "/newphoto/jlsat_kharjyh_ala_asth_almnzl.jpg",
     "description": "جلسات خارجيه على اسطح المنزل",
     "alt": "تركيب جلسات خارجيه على اسطح المنزل في الرياض — جلسات خارجية",
     "type": "جلسات خارجية",
     "slug": "asatih-sandwich-panel-riyadh"
   },
   {
-    "filename": "جلسات خارجيه.jpg",
-    "image": "/newphoto/جلسات خارجيه.jpg",
+    "filename": "jlsat_kharjyh.jpg",
+    "image": "/newphoto/jlsat_kharjyh.jpg",
     "description": "جلسات خارجيه",
     "alt": "تركيب جلسات خارجيه في الرياض — جلسات خارجية",
     "type": "جلسات خارجية",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "جلسه خارجيه .jpg",
-    "image": "/newphoto/جلسه خارجيه .jpg",
+    "filename": "jlsh_kharjyh.jpg",
+    "image": "/newphoto/jlsh_kharjyh.jpg",
     "description": "جلسه خارجيه",
     "alt": "تركيب جلسه خارجيه في الرياض — جلسات خارجية",
     "type": "جلسات خارجية",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "جلسه خارجيه برجولات.jpg",
-    "image": "/newphoto/جلسه خارجيه برجولات.jpg",
+    "filename": "jlsh_kharjyh_brjwlat.jpg",
+    "image": "/newphoto/jlsh_kharjyh_brjwlat.jpg",
     "description": "جلسه خارجيه برجولات",
     "alt": "تركيب جلسه خارجيه برجولات في الرياض — برجولات وجلسات",
     "type": "برجولات وجلسات",
     "slug": "jalsat-borjolat-riyadh"
   },
   {
-    "filename": "ساتر حديد تغطيه كامله.jpg",
-    "image": "/newphoto/ساتر حديد تغطيه كامله.jpg",
+    "filename": "satr_hdyd_tghtyh_kamlh.jpg",
+    "image": "/newphoto/satr_hdyd_tghtyh_kamlh.jpg",
     "description": "ساتر حديد تغطيه كامله",
     "alt": "تركيب ساتر حديد تغطيه كامله في الرياض — سواتر",
     "type": "سواتر",
     "slug": "sawatr-hadid-riyadh"
   },
   {
-    "filename": "سندوش بنل ملاحق.jpg",
-    "image": "/newphoto/سندوش بنل ملاحق.jpg",
+    "filename": "sndwsh_bnl_mlahq.jpg",
+    "image": "/newphoto/sndwsh_bnl_mlahq.jpg",
     "description": "ساندويش بنل ملاحق",
     "alt": "تركيب ساندويش بنل ملاحق في الرياض — ساندويش بنل",
     "type": "ساندويش بنل",
     "slug": "ghoraf-sandwich-panel-riyadh"
   },
   {
-    "filename": "سواتر .jpg",
-    "image": "/newphoto/سواتر .jpg",
+    "filename": "swatr.jpg",
+    "image": "/newphoto/swatr.jpg",
     "description": "سواتر",
     "alt": "تركيب سواتر في الرياض — سواتر",
     "type": "سواتر",
     "slug": "sawatr-hadid-riyadh"
   },
   {
-    "filename": "سواتر بديل الخشب.jpg",
-    "image": "/newphoto/سواتر بديل الخشب.jpg",
+    "filename": "swatr_bdyl_alkhshb.jpg",
+    "image": "/newphoto/swatr_bdyl_alkhshb.jpg",
     "description": "سواتر بديل الخشب",
     "alt": "تركيب سواتر بديل الخشب في الرياض — سواتر بديل الخشب",
     "type": "سواتر بديل الخشب",
     "slug": "sawatr-plastic-riyadh"
   },
   {
-    "filename": "سواتر بلاستيكيه.jpg",
-    "image": "/newphoto/سواتر بلاستيكيه.jpg",
+    "filename": "swatr_blastykyh.jpg",
+    "image": "/newphoto/swatr_blastykyh.jpg",
     "description": "سواتر بلاستيكية",
     "alt": "تركيب سواتر بلاستيكية في الرياض — سواتر بلاستيك",
     "type": "سواتر بلاستيك",
     "slug": "sawatr-plastic-riyadh"
   },
   {
-    "filename": "سواتر حديد جميله.jpg",
-    "image": "/newphoto/سواتر حديد جميله.jpg",
+    "filename": "swatr_hdyd_jmylh.jpg",
+    "image": "/newphoto/swatr_hdyd_jmylh.jpg",
     "description": "سواتر حديد جميله",
     "alt": "تركيب سواتر حديد جميله في الرياض — سواتر",
     "type": "سواتر",
     "slug": "sawatr-hadid-riyadh"
   },
   {
-    "filename": "سواتر حديد.jpg",
-    "image": "/newphoto/سواتر حديد.jpg",
+    "filename": "swatr_hdyd.jpg",
+    "image": "/newphoto/swatr_hdyd.jpg",
     "description": "سواتر حديد",
     "alt": "تركيب سواتر حديد في الرياض — سواتر",
     "type": "سواتر",
     "slug": "sawatr-hadid-riyadh"
   },
   {
-    "filename": "سواتر ليزر...jpg",
-    "image": "/newphoto/سواتر ليزر...jpg",
+    "filename": "swatr_lyzr.jpg",
+    "image": "/newphoto/swatr_lyzr.jpg",
     "description": "سواتر ليزر",
     "alt": "تركيب سواتر ليزر في الرياض — سواتر ليزر",
     "type": "سواتر ليزر",
     "slug": "sawatr-laser-riyadh"
   },
   {
-    "filename": "غرف خارجه سندوش بنل.jpg",
-    "image": "/newphoto/غرف خارجه سندوش بنل.jpg",
+    "filename": "ghrf_kharjh_sndwsh_bnl.jpg",
+    "image": "/newphoto/ghrf_kharjh_sndwsh_bnl.jpg",
     "description": "غرف خارجية ساندويش بنل",
     "alt": "تركيب غرف خارجية ساندويش بنل في الرياض — ساندويش بنل",
     "type": "ساندويش بنل",
     "slug": "ghoraf-sandwich-panel-riyadh"
   },
   {
-    "filename": "غرف سندوش بنل.jpg",
-    "image": "/newphoto/غرف سندوش بنل.jpg",
+    "filename": "ghrf_sndwsh_bnl.jpg",
+    "image": "/newphoto/ghrf_sndwsh_bnl.jpg",
     "description": "غرف ساندويش بنل",
     "alt": "تركيب غرف ساندويش بنل في الرياض — ساندويش بنل",
     "type": "ساندويش بنل",
     "slug": "ghoraf-sandwich-panel-riyadh"
   },
   {
-    "filename": "قرميد .jpg",
-    "image": "/newphoto/قرميد .jpg",
+    "filename": "qrmyd.jpg",
+    "image": "/newphoto/qrmyd.jpg",
     "description": "قرميد",
     "alt": "تركيب قرميد في الرياض — قرميد",
     "type": "قرميد",
     "slug": "qaramid-riyadh"
   },
   {
-    "filename": "مضلات ..jpg",
-    "image": "/newphoto/مضلات ..jpg",
+    "filename": "mdlat.jpg",
+    "image": "/newphoto/mdlat.jpg",
     "description": "مظلات",
     "alt": "تركيب مظلات في الرياض — مظلات",
     "type": "مظلات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات ساحات مدارس.jpg",
-    "image": "/newphoto/مضلات ساحات مدارس.jpg",
+    "filename": "mdlat_sahat_mdars.jpg",
+    "image": "/newphoto/mdlat_sahat_mdars.jpg",
     "description": "مظلات ساحات مدارس",
     "alt": "تركيب مظلات ساحات مدارس في الرياض — مظلات مدارس",
     "type": "مظلات مدارس",
     "slug": "mazallat-madaris-riyadh"
   },
   {
-    "filename": "مضلات سيارات ..jpg",
-    "image": "/newphoto/مضلات سيارات ..jpg",
+    "filename": "mdlat_syarat.jpg",
+    "image": "/newphoto/mdlat_syarat.jpg",
     "description": "مظلات سيارات",
     "alt": "تركيب مظلات سيارات في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات سيارات جميله..jpg",
-    "image": "/newphoto/مضلات سيارات جميله..jpg",
+    "filename": "mdlat_syarat_jmylh.jpg",
+    "image": "/newphoto/mdlat_syarat_jmylh.jpg",
     "description": "مظلات سيارات جميله",
     "alt": "تركيب مظلات سيارات جميله في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات سيارات،.jpg",
-    "image": "/newphoto/مضلات سيارات،.jpg",
+    "filename": "mdlat_syarat_3.jpg",
+    "image": "/newphoto/mdlat_syarat_3.jpg",
     "description": "مظلات سيارات،",
     "alt": "تركيب مظلات سيارات، في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات سيارت .jpg",
-    "image": "/newphoto/مضلات سيارت .jpg",
+    "filename": "mdlat_syart.jpg",
+    "image": "/newphoto/mdlat_syart.jpg",
     "description": "مظلات سيارت",
     "alt": "تركيب مظلات سيارت في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات سيارت بتصميم جميل.jpg",
-    "image": "/newphoto/مضلات سيارت بتصميم جميل.jpg",
+    "filename": "mdlat_syart_btsmym_jmyl.jpg",
+    "image": "/newphoto/mdlat_syart_btsmym_jmyl.jpg",
     "description": "مظلات سيارت بتصميم جميل",
     "alt": "تركيب مظلات سيارت بتصميم جميل في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات سيارت2.jpg",
-    "image": "/newphoto/مضلات سيارت2.jpg",
+    "filename": "mdlat_syart2.jpg",
+    "image": "/newphoto/mdlat_syart2.jpg",
     "description": "مظلات سيارت2",
     "alt": "تركيب مظلات سيارت2 في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات كلادينج .jpg",
-    "image": "/newphoto/مضلات كلادينج .jpg",
+    "filename": "mdlat_kladynj.jpg",
+    "image": "/newphoto/mdlat_kladynj.jpg",
     "description": "مظلات كلادينج",
     "alt": "تركيب مظلات كلادينج في الرياض — مظلات كلادينج",
     "type": "مظلات كلادينج",
     "slug": "mazallat-shad-inshai-riyadh"
   },
   {
-    "filename": "مضلات مدارس جميله.jpg",
-    "image": "/newphoto/مضلات مدارس جميله.jpg",
+    "filename": "mdlat_mdars_jmylh.jpg",
+    "image": "/newphoto/mdlat_mdars_jmylh.jpg",
     "description": "مظلات مدارس جميله",
     "alt": "تركيب مظلات مدارس جميله في الرياض — مظلات مدارس",
     "type": "مظلات مدارس",
     "slug": "mazallat-madaris-riyadh"
   },
   {
-    "filename": "مضلات مدارس.jpg",
-    "image": "/newphoto/مضلات مدارس.jpg",
+    "filename": "mdlat_mdars.jpg",
+    "image": "/newphoto/mdlat_mdars.jpg",
     "description": "مظلات مدارس",
     "alt": "تركيب مظلات مدارس في الرياض — مظلات مدارس",
     "type": "مظلات مدارس",
     "slug": "mazallat-madaris-riyadh"
   },
   {
-    "filename": "مضلات مسابح لكسان.jpg",
-    "image": "/newphoto/مضلات مسابح لكسان.jpg",
+    "filename": "mdlat_msabh_lksan.jpg",
+    "image": "/newphoto/mdlat_msabh_lksan.jpg",
     "description": "مظلات مسابح لكسان",
     "alt": "تركيب مظلات مسابح لكسان في الرياض — مظلات مسابح",
     "type": "مظلات مسابح",
     "slug": "mazallat-masabi-riyadh"
   },
   {
-    "filename": "مضلات مقوسه ..jpg",
-    "image": "/newphoto/مضلات مقوسه ..jpg",
+    "filename": "mdlat_mqwsh.jpg",
+    "image": "/newphoto/mdlat_mqwsh.jpg",
     "description": "مظلات مقوسه",
     "alt": "تركيب مظلات مقوسه في الرياض — مظلات مقوسة",
     "type": "مظلات مقوسة",
     "slug": "mazallat-maqousa-riyadh"
   },
   {
-    "filename": "مضلات مقوسه مواقف.jpg",
-    "image": "/newphoto/مضلات مقوسه مواقف.jpg",
+    "filename": "mdlat_mqwsh_mwaqf.jpg",
+    "image": "/newphoto/mdlat_mqwsh_mwaqf.jpg",
     "description": "مظلات مقوسه مواقف",
     "alt": "تركيب مظلات مقوسه مواقف في الرياض — مظلات مقوسة",
     "type": "مظلات مقوسة",
     "slug": "mazallat-maqousa-riyadh"
   },
   {
-    "filename": "مضلات ممرات .jpg",
-    "image": "/newphoto/مضلات ممرات .jpg",
+    "filename": "mdlat_mmrat.jpg",
+    "image": "/newphoto/mdlat_mmrat.jpg",
     "description": "مظلات ممرات",
     "alt": "تركيب مظلات ممرات في الرياض — مظلات ممرات",
     "type": "مظلات ممرات",
     "slug": "mazallat-maqousa-riyadh"
   },
   {
-    "filename": "مضلات مواقف سيارات.jpg",
-    "image": "/newphoto/مضلات مواقف سيارات.jpg",
+    "filename": "mdlat_mwaqf_syarat.jpg",
+    "image": "/newphoto/mdlat_mwaqf_syarat.jpg",
     "description": "مظلات مواقف سيارات",
     "alt": "تركيب مظلات مواقف سيارات في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات مواقف سيارت.jpg",
-    "image": "/newphoto/مضلات مواقف سيارت.jpg",
+    "filename": "mdlat_mwaqf_syart.jpg",
+    "image": "/newphoto/mdlat_mwaqf_syart.jpg",
     "description": "مظلات مواقف سيارت",
     "alt": "تركيب مظلات مواقف سيارت في الرياض — مظلات سيارات",
     "type": "مظلات سيارات",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات مواقف.jpg",
-    "image": "/newphoto/مضلات مواقف.jpg",
+    "filename": "mdlat_mwaqf.jpg",
+    "image": "/newphoto/mdlat_mwaqf.jpg",
     "description": "مظلات مواقف",
     "alt": "تركيب مظلات مواقف في الرياض — مظلات مواقف",
     "type": "مظلات مواقف",
     "slug": "mazallat-sayarat-riyadh"
   },
   {
-    "filename": "مضلات هرميه .jpg",
-    "image": "/newphoto/مضلات هرميه .jpg",
+    "filename": "mdlat_hrmyh.jpg",
+    "image": "/newphoto/mdlat_hrmyh.jpg",
     "description": "مظلات هرميه",
     "alt": "تركيب مظلات هرميه في الرياض — مظلات هرمية",
     "type": "مظلات هرمية",
     "slug": "mazallat-haramiya-riyadh"
   },
   {
-    "filename": "مضلات هرميه حدائق.jpg",
-    "image": "/newphoto/مضلات هرميه حدائق.jpg",
+    "filename": "mdlat_hrmyh_hdaeq.jpg",
+    "image": "/newphoto/mdlat_hrmyh_hdaeq.jpg",
     "description": "مظلات هرميه حدائق",
     "alt": "تركيب مظلات هرميه حدائق في الرياض — تنسيق حدائق",
     "type": "تنسيق حدائق",
     "slug": "tansiq-hadaiq-riyadh"
   },
   {
-    "filename": "مضلات هرميه مباني عامه.jpg",
-    "image": "/newphoto/مضلات هرميه مباني عامه.jpg",
+    "filename": "mdlat_hrmyh_mbany_aamh.jpg",
+    "image": "/newphoto/mdlat_hrmyh_mbany_aamh.jpg",
     "description": "مظلات هرميه مباني عامه",
     "alt": "تركيب مظلات هرميه مباني عامه في الرياض — مظلات هرمية",
     "type": "مظلات هرمية",
     "slug": "mazallat-haramiya-riyadh"
   },
   {
-    "filename": "مضلات هرميه مسجد.jpg",
-    "image": "/newphoto/مضلات هرميه مسجد.jpg",
+    "filename": "mdlat_hrmyh_msjd.jpg",
+    "image": "/newphoto/mdlat_hrmyh_msjd.jpg",
     "description": "مظلات هرميه مسجد",
     "alt": "تركيب مظلات هرميه مسجد في الرياض — مظلات هرمية",
     "type": "مظلات هرمية",
     "slug": "mazallat-haramiya-riyadh"
   },
   {
-    "filename": "هناجر مستودعات.jpg",
-    "image": "/newphoto/هناجر مستودعات.jpg",
+    "filename": "hnajr_mstwdaat.jpg",
+    "image": "/newphoto/hnajr_mstwdaat.jpg",
     "description": "هناجر مستودعات",
     "alt": "تركيب هناجر مستودعات في الرياض — هناجر ومستودعات",
     "type": "هناجر ومستودعات",
