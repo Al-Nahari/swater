@@ -1,44 +1,52 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   نظام التصميم — "القطع بالليزر" (Laser-Cut Steel)
-   مستوحى من صناعة السواتر: صفائح الحديد، القص بالليزر، الظل والشمس.
+   نظام التصميم — "مسار الشمس" (Sun to Shadow)
+   من إشراقة الشمس البرتقالية، عبر شفق بنفسجي، إلى ظل كحلي داكن —
+   بالضبط ما تفعله المظلات والسواتر: تدرّج الضوء إلى ظل.
    ========================================================================== */
 
 :root {
-  /* سطوح */
-  --canvas: #ECE8DD;        /* أرضية دافئة بلون الرمل/الخرسانة، ليست كريمية كليشيه */
-  --canvas-2: #E1DBC9;      /* لوح أغمق قليلاً للفصل بين الأقسام */
-  --paper: #F7F5EE;         /* سطح البطاقات */
-  --ink: #1C2023;           /* أسود-فولاذي دافئ (النص الأساسي والخلفيات الغامقة) */
-  --ink-2: #2B3238;         /* فولاذ متوسط */
-  --ink-3: #3F4A50;         /* فولاذ فاتح للنصوص الثانوية على الغامق */
+  /* سطوح فاتحة (الأقسام العادية) */
+  --canvas: #F7F6FB;         /* أبيض بارد بلمسة بنفسجية خفيفة */
+  --canvas-2: #EFEDF7;
+  --paper: #FFFFFF;
 
-  /* الألوان الوظيفية */
+  /* سطوح داكنة (الهيرو، الفوتر، أقسام التباين) */
+  --night: #0B0A17;
+  --night-2: #131226;
+  --night-3: #1D1B36;
+
+  --ink: #14121F;             /* نص أساسي على الفاتح */
+  --ink-soft: #4B4760;
+
   --background: var(--canvas);
   --foreground: var(--ink);
   --muted: var(--canvas-2);
-  --muted-foreground: #5B5647;
-  --border: #C7BFA8;
-  --border-dark: #454F55;
+  --muted-foreground: #6B6480;
+  --border: #E2DFEF;
+  --border-dark: #2B2946;
 
-  /* الهوية: نحاس محروق (لون الصدأ على الحديد المقصوص) + كهرمان الشمس */
-  --primary: #1C2023;        /* الفولاذ — يستخدم للنصوص القوية والأزرار الثانوية */
-  --primary-dark: #0F1214;
-  --primary-light: #3F4A50;
+  /* هوية "مسار الشمس": من الكهرمان إلى البنفسجي إلى الأزرق النيلي */
+  --sun: #FF9142;
+  --sun-light: #FFB673;
+  --coral: #FF5E7A;
+  --dusk: #9B5CF6;
+  --indigo: #6C4CE0;
+  --sky: #4C6EF5;
 
-  --copper: #A85327;         /* اللون التوقيعي: نحاس/صدأ — الأزرار والروابط الأساسية */
-  --copper-dark: #7C3C1B;
-  --copper-light: #C97A47;
+  --primary: var(--indigo);
+  --primary-dark: #4B37B0;
+  --primary-light: var(--dusk);
 
-  --sun: #D99A34;            /* كهرمان الشمس — يُستخدم بشح لإبراز الأرقام والتفاصيل */
-  --sun-light: #F0BE6C;
+  --success: #22B37A;
+  --error: #F2495C;
 
-  --success: #4C7A5B;
-  --error: #B1443B;
+  --gradient-sun: linear-gradient(90deg, var(--sun) 0%, var(--coral) 35%, var(--dusk) 68%, var(--indigo) 100%);
+  --gradient-glow: radial-gradient(circle, var(--dusk) 0%, transparent 70%);
 
-  --card-shadow: 0 1px 0 0 var(--border), 0 10px 24px -12px rgb(28 32 35 / 0.25);
-  --card-shadow-hover: 0 1px 0 0 var(--border), 0 22px 34px -16px rgb(28 32 35 / 0.35);
+  --card-shadow: 0 1px 2px 0 rgb(20 18 31 / 0.06), 0 8px 24px -8px rgb(76 78 245 / 0.15);
+  --card-shadow-hover: 0 4px 8px 0 rgb(20 18 31 / 0.08), 0 16px 40px -10px rgb(107 76 224 / 0.28);
 }
 
 @theme inline {
@@ -47,20 +55,22 @@
   --color-canvas: var(--canvas);
   --color-canvas-2: var(--canvas-2);
   --color-paper: var(--paper);
+  --color-night: var(--night);
+  --color-night-2: var(--night-2);
+  --color-night-3: var(--night-3);
   --color-ink: var(--ink);
-  --color-ink-2: var(--ink-2);
-  --color-ink-3: var(--ink-3);
+  --color-ink-soft: var(--ink-soft);
 
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
   --color-primary-light: var(--primary-light);
 
-  --color-copper: var(--copper);
-  --color-copper-dark: var(--copper-dark);
-  --color-copper-light: var(--copper-light);
-
   --color-sun: var(--sun);
   --color-sun-light: var(--sun-light);
+  --color-coral: var(--coral);
+  --color-dusk: var(--dusk);
+  --color-indigo: var(--indigo);
+  --color-sky: var(--sky);
 
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -77,7 +87,6 @@
 /* ============================== الأساسيات ============================== */
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -103,81 +112,80 @@ h1, h2, h3, h4, .font-display {
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--muted); }
-::-webkit-scrollbar-thumb {
-  background: var(--copper);
-  border-radius: 0;
-  border: 2px solid var(--muted);
-}
-::-webkit-scrollbar-thumb:hover { background: var(--copper-dark); }
+::-webkit-scrollbar-thumb { background: var(--gradient-sun); border-radius: 8px; border: 2px solid var(--muted); }
 
 input:focus, textarea:focus, select:focus,
 a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--copper);
+  outline: 2px solid var(--dusk);
   outline-offset: 2px;
 }
 
 .container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
 
-/* ==================== الشِعار البصري: القطع بالليزر ====================
-   نمط هندسي مقتبس من ألواح السواتر المقصوصة بالليزر — يُستخدم كخلفية
-   حقيقية وكفاصل بين الأقسام بدل التدرجات والفقاعات الضبابية المعتادة. */
+/* ==================== الشِعار البصري: تدرّج الشمس ==================== */
 
-.laser-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%23A85327' stroke-width='1.4'%3E%3Cpath d='M42 2 L82 42 L42 82 L2 42 Z'/%3E%3Cpath d='M42 18 L66 42 L42 66 L18 42 Z'/%3E%3Ccircle cx='42' cy='42' r='4'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 84px 84px;
-}
-
-/* حافة مقصوصة بزاوية حادة — بديل عن الموجات الناعمة كفاصل بين الأقسام */
-.cut-edge-bottom {
-  clip-path: polygon(0 0, 100% 0, 100% 94%, 92% 100%, 0 100%);
-}
-.cut-edge-top {
-  clip-path: polygon(0 6%, 8% 0, 100% 0, 100% 100%, 0 100%);
+.text-gradient-sun {
+  background: var(--gradient-sun);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-/* لوحة بيانات فنية (Spec Plate) — تُستخدم للأرقام والإحصاءات بدل البطاقات
-   الدائرية الزجاجية المعتادة: زوايا حادة، حواف شعرية، وأقواس بزاوية. */
-.spec-plate {
-  position: relative;
-  background: var(--paper);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-}
-.spec-plate::before,
-.spec-plate::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border: 2px solid var(--copper);
-  opacity: 0.8;
-}
-.spec-plate::before { top: -1px; inset-inline-start: -1px; border-inline-end: none; border-bottom: none; }
-.spec-plate::after { bottom: -1px; inset-inline-end: -1px; border-inline-start: none; border-top: none; }
+.bg-gradient-sun { background: var(--gradient-sun); }
 
-/* زر بزاوية مقصوصة — بديل عن الأزرار البيضاوية rounded-full */
-.notch-btn {
-  clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+.bg-night-sky {
+  background:
+    radial-gradient(1100px 500px at 15% -10%, rgb(255 145 66 / 0.20), transparent 60%),
+    radial-gradient(900px 600px at 90% 10%, rgb(107 76 224 / 0.35), transparent 60%),
+    radial-gradient(700px 500px at 50% 120%, rgb(76 110 245 / 0.20), transparent 60%),
+    var(--night);
 }
 
-/* فاصل شعري بلون النحاس */
-.copper-rule {
-  height: 2px;
-  background: linear-gradient(90deg, var(--copper) 0%, var(--copper) 40px, var(--border) 40px);
+/* بطاقة زجاجية حديثة — glassmorphism مقصود ومتحكَّم به */
+.glass-card {
+  background: rgb(255 255 255 / 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgb(255 255 255 / 0.12);
 }
+
+.glass-card-light {
+  background: rgb(255 255 255 / 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.6);
+  box-shadow: var(--card-shadow);
+}
+
+.glow-dusk {
+  box-shadow: 0 0 0 1px rgb(107 76 224 / 0.25), 0 20px 60px -15px rgb(107 76 224 / 0.55);
+}
+
+/* توهج طيفي عائم خلف عناصر الهيرو — يمثّل حركة الشمس */
+.sun-orb {
+  background: radial-gradient(circle at 35% 35%, var(--sun-light), var(--sun) 40%, transparent 72%);
+  filter: blur(2px);
+}
+
+.shadow-orb {
+  background: radial-gradient(circle, var(--indigo), transparent 70%);
+}
+
+/* خط فاصل بتدرج الشمس */
+.gradient-rule { height: 3px; background: var(--gradient-sun); border-radius: 999px; }
 
 /* ============================== الحركة ============================== */
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-18px) translateX(10px); }
 }
-@keyframes drawLine {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
 }
-.animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
-.animate-draw-line { transform-origin: right; animation: drawLine 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+.animate-float-slow { animation: floatSlow 8s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulseGlow 4s ease-in-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
@@ -193,36 +201,36 @@ a:focus-visible, button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  animation: fadeInUp 0.5s ease-out;
 }
 
 .floating-contact-btn {
   width: 56px;
   height: 56px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px -5px rgb(28 32 35 / 0.35);
+  box-shadow: 0 10px 25px -5px rgb(20 18 31 / 0.35);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 }
 
-.floating-contact-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 28px -6px rgb(28 32 35 / 0.4); }
+.floating-contact-btn:hover { transform: scale(1.08) translateY(-2px); }
 
 .floating-contact-btn svg { width: 26px; height: 26px; }
 
-.floating-contact-btn.whatsapp { background: #128C7E; color: white; }
-.floating-contact-btn.phone { background: var(--copper); color: white; }
+.floating-contact-btn.whatsapp { background: #22B37A; color: white; }
+.floating-contact-btn.phone { background: var(--gradient-sun); color: white; }
 
 .floating-contact-btn .tooltip {
   position: absolute;
   right: 65px;
   bottom: 50%;
   transform: translateY(50%);
-  background: var(--ink);
+  background: var(--night-2);
   color: white;
   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   font-size: 0.875rem;
   white-space: nowrap;
   opacity: 0;
