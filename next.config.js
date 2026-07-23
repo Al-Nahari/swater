@@ -43,18 +43,19 @@ const nextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
-          {
-            key: 'Content-Security-Policy',
-            value: [
-              "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' analytics.ahrefs.com",
-              "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
-              "font-src 'self' fonts.gstatic.com data:",
-              "img-src 'self' data: blob: https:",
-              "connect-src 'self' analytics.ahrefs.com",
-              "frame-ancestors 'none'",
-            ].join('; '),
-          },
+       {
+  key: 'Content-Security-Policy',
+  value: [
+    "default-src 'self'",
+    "script-src 'self' 'unsafe-inline' analytics.ahrefs.com",
+    "style-src 'self' 'unsafe-inline' fonts.googleapis.com",
+    "font-src 'self' fonts.gstatic.com data:",
+    "img-src 'self' data: blob: https:",
+    "connect-src 'self' analytics.ahrefs.com",
+    "frame-src https://www.google.com https://maps.google.com", // ← السطر الجديد
+    "frame-ancestors 'none'",
+  ].join('; '),
+},
         ],
       },
       {
