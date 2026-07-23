@@ -646,16 +646,16 @@ export const imgGallery: (GalleryImage & { slug: string; filename: string })[] =
   {
     "filename": "mdlat_mdars_bshkl_jmyl.jpg",
     "image": "/img/mdlat_mdars_bshkl_jmyl.jpg",
-    "description": "مظلات مدارس بشكل جميل",
-    "alt": "تركيب مظلات مدارس بشكل جميل في   — مظلات مدارس",
+    "description": "مظلات مدارس شكل جميل",
+    "alt": "تركيب مظلات مدارس شكل جميل في   — مظلات مدارس",
     "type": "مظلات مدارس",
     "slug": "mazallat-madaris-riyadh"
   },
   {
     "filename": "mdlat_mdars_bshkl_raegh.jpg",
     "image": "/img/mdlat_mdars_bshkl_raegh.jpg",
-    "description": "مظلات مدارس بشكل رائغ",
-    "alt": "تركيب مظلات مدارس بشكل رائغ في   — مظلات مدارس",
+    "description": "مظلات مدارس شكل رائغ",
+    "alt": "تركيب مظلات مدارس شكل رائغ في   — مظلات مدارس",
     "type": "مظلات مدارس",
     "slug": "mazallat-madaris-riyadh"
   },

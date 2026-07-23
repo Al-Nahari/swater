@@ -65,7 +65,7 @@ export default function Hero() {
                 <span className="animate-pulse-glow absolute inline-flex h-full w-full rounded-full bg-sun" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-sun" />
               </span>
-              خبراء السواتر والمظلات في  
+              خبراء السواتر والمظلات   
             </motion.div>
 
             <motion.h1
