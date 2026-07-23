@@ -80,7 +80,7 @@ export default function Hero() {
               variants={item}
               className="text-lg md:text-xl text-white/70 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              تصميم وتنفيذ مظلات سيارات، سواتر حديد وليزر، برجولات وهناجر في   —
+              تصميم وتنفيذ مظلات سيارات، سواتر حديد وليزر، برجولات وهناجر    —
               خامات فاخرة، تصنيع دقيق، وضمان حقيقي مكتوب على كل عمل.
             </motion.p>
 

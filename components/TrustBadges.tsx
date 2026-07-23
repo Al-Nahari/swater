@@ -1,12 +1,5 @@
 const BADGES = [
   {
-    title: 'سجل تجاري موثّق',
-    desc: 'منشأة مرخّصة تعمل وفق الأنظمة السعودية',
-    icon: (
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-    ),
-  },
-  {
     title: 'ضمان مكتوب',
     desc: 'حتى 10 سنوات على الهيكل والتركيب',
     icon: (
