@@ -214,7 +214,7 @@ python3 apply-rename.py
 ```bash
 # استخدم الـ rename utility
 cd public/img
-rename 's/برجوله الرياض بديل الخشب/project-02/' *.jpg
+rename 's/برجوله   بديل الخشب/project-02/' *.jpg
 ```
 
 #### الطريقة ج: نص Python مخصص

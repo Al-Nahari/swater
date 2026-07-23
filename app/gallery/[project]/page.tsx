@@ -37,10 +37,10 @@ export async function generateMetadata({
   }
 
   return buildPageMetadata({
-    title: `${project.title} | معرض أعمال مظلات وسواتر الرياض`,
+    title: `${project.title} | معرض أعمال  مظلات وسواتر الظل الراقي  `,
     description: project.summary,
     path: `/gallery/${project.slug}`,
-    keywords: [project.serviceLabel, project.region, 'مظلات وسواتر الرياض'],
+    keywords: [project.serviceLabel, project.region, ' مظلات وسواتر الظل الراقي  '],
   });
 }
 
@@ -151,7 +151,7 @@ export default async function ProjectPage({
                     هل تبحث عن خدمة {relatedService.shortTitle}؟
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    راجع كل تفاصيل خدمة {relatedService.shortTitle} في الرياض — الأسعار
+                    راجع كل تفاصيل خدمة {relatedService.shortTitle} في   — الأسعار
                     التقريبية، الخامات المستخدمة، والأسئلة الشائعة.
                   </p>
                   <Link

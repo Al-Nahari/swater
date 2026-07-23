@@ -98,7 +98,7 @@ export function getSlug(name) {
 }
 
 export function buildAlt(description, type) {
-  return `تركيب ${description} في الرياض — ${type}`;
+  return `تركيب ${description} في   — ${type}`;
 }
 
 export function labelFromFilename(filename) {

@@ -15,7 +15,7 @@ export default function Features() {
             ما يميزنا
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            نحن نقدم أفضل الخدمات في مجال السواتر والمظلات في الرياض
+            نحن نقدم أفضل الخدمات في مجال السواتر والمظلات في  
           </p>
         </div>
 

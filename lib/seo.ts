@@ -45,7 +45,7 @@ export function buildPageMetadata({
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} — تركيب مظلات وسواتر في الرياض`,
+          alt: `${SITE_NAME} — تركيب  مظلات وسواتر الظل الراقي في  `,
         },
       ],
     },
@@ -82,7 +82,7 @@ export function webSiteSchema() {
   };
 }
 
-/** LocalBusiness schema محسّن بإحداثيات الرياض */
+/** LocalBusiness schema محسّن بإحداثيات   */
 export function localBusinessSchema() {
   return {
     '@context': 'https://schema.org',
@@ -104,14 +104,14 @@ export function localBusinessSchema() {
     // (وضع عنوان وهمي يخالف إرشادات Google ويعرّض النطاق لخطر الرفض)
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'الرياض',
-      addressRegion: 'منطقة الرياض',
+      addressLocality: ' ',
+      addressRegion: 'منطقة  ',
       addressCountry: 'SA',
     },
     // نطاق تغطية الخدمة بدلاً من موقع ثابت — أدق تمثيلاً لعمل ميداني بالكامل
     areaServed: [
-      { '@type': 'City', name: 'الرياض' },
-      { '@type': 'AdministrativeArea', name: 'منطقة الرياض' },
+      { '@type': 'City', name: ' ' },
+      { '@type': 'AdministrativeArea', name: 'منطقة  ' },
     ],
     priceRange: '$$',
     currenciesAccepted: 'SAR',
@@ -149,7 +149,7 @@ export function serviceSchema({
     provider: { '@id': `${SITE_URL}/#organization` },
     areaServed: {
       '@type': 'City',
-      name: 'الرياض',
+      name: ' ',
     },
     url: absoluteUrl(`/${slug}`),
     ...(image ? { image: absoluteUrl(image) } : {}),

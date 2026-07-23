@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata = buildPageMetadata({
-  title: 'الصفحة غير موجودة | مظلات و سواتر الرياض',
+  title: 'الصفحة غير موجودة | مظلات و سواتر  ',
   description: 'الصفحة التي تبحث عنها غير متوفرة. تصفح خدماتنا أو معرض الأعمال.',
   path: '/404',
   noIndex: true,

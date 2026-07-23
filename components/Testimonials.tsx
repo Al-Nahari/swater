@@ -16,7 +16,7 @@ export default function Testimonials() {
             </h2>
           </div>
           <p className="text-lg text-muted-foreground lg:pb-2">
-            كل رأي هنا من عميل حقيقي تعاملنا معه في الرياض — بلا مبالغة وبلا صياغة تسويقية جاهزة.
+            كل رأي هنا من عميل حقيقي تعاملنا معه في   — بلا مبالغة وبلا صياغة تسويقية جاهزة.
           </p>
         </div>
 

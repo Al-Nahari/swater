@@ -65,7 +65,7 @@ export default function Hero() {
                 <span className="animate-pulse-glow absolute inline-flex h-full w-full rounded-full bg-sun" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-sun" />
               </span>
-              خبراء السواتر والمظلات في الرياض
+              خبراء السواتر والمظلات في  
             </motion.div>
 
             <motion.h1
@@ -80,7 +80,7 @@ export default function Hero() {
               variants={item}
               className="text-lg md:text-xl text-white/70 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed"
             >
-              تصميم وتنفيذ مظلات سيارات، سواتر حديد وليزر، برجولات وهناجر في الرياض —
+              تصميم وتنفيذ مظلات سيارات، سواتر حديد وليزر، برجولات وهناجر في   —
               خامات فاخرة، تصنيع دقيق، وضمان حقيقي مكتوب على كل عمل.
             </motion.p>
 
@@ -163,7 +163,7 @@ export default function Hero() {
               className="absolute bottom-10 -left-8 glass-card rounded-2xl p-6 w-64 shadow-2xl"
             >
               <div className="text-4xl font-display font-extrabold text-gradient-sun mb-1">+500</div>
-              <div className="text-sm text-white/70">مشروع تم تسليمه في الرياض وضواحيها خلال ١٠ سنوات</div>
+              <div className="text-sm text-white/70">مشروع تم تسليمه في   وضواحيها خلال ١٠ سنوات</div>
             </motion.div>
           </motion.div>
         </div>

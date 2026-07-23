@@ -126,7 +126,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-14 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
           <p>© {currentYear} {companyInfo.name}. جميع الحقوق محفوظة.</p>
-          <p>تركيب مظلات وسواتر في الرياض وجميع أحياء المنطقة</p>
+          <p>تركيب  مظلات وسواتر الظل الراقي في   وجميع أحياء المنطقة</p>
         </div>
       </div>
     </footer>

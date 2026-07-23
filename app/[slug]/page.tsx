@@ -120,7 +120,7 @@ export default async function Page({
               <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
                 <div className="order-2 lg:order-1">
                   <p className="text-sm font-semibold text-coffee-medium mb-3">
-                    {service.shortTitle} — الرياض
+                    {service.shortTitle} —  
                   </p>
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5 leading-tight">
                     {service.title}
@@ -168,7 +168,7 @@ export default async function Page({
                 <div className="relative aspect-[4/3] lg:aspect-auto lg:h-[420px] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2">
                   <Image
                     src={service.image}
-                    alt={`${service.shortTitle} — تركيب احترافي في الرياض`}
+                    alt={`${service.shortTitle} — تركيب احترافي في  `}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -186,7 +186,7 @@ export default async function Page({
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                عن خدمة {service.shortTitle} في الرياض
+                عن خدمة {service.shortTitle} في  
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 {leadParagraph}
@@ -263,7 +263,7 @@ export default async function Page({
               <div className="container mx-auto px-4">
                 <div className="max-w-3xl mx-auto">
                   <h2 id="article-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-10 text-center">
-                    دليلك الكامل عن {service.shortTitle} في الرياض
+                    دليلك الكامل عن {service.shortTitle} في  
                   </h2>
                   <div className="space-y-8">
                     {article.map((block: ArticleBlock, index: number) => (
@@ -286,10 +286,10 @@ export default async function Page({
               <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                   <h2 id="gallery-heading" className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-                    معرض أعمال {service.shortTitle} في الرياض
+                    معرض أعمال {service.shortTitle} في  
                   </h2>
                   <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                    صور حقيقية من مشاريعنا المنفذة — {galleryImages.length} مشروع في الرياض
+                    صور حقيقية من مشاريعنا المنفذة — {galleryImages.length} مشروع في  
                   </p>
                 </div>
                 <GalleryLightbox images={galleryImages} title={service.title} />
@@ -347,7 +347,7 @@ export default async function Page({
                       <div className="relative aspect-[16/9] overflow-hidden">
                         <Image
                           src={related.image}
-                          alt={`${related.shortTitle} في الرياض`}
+                          alt={`${related.shortTitle} في  `}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                           sizes="(max-width: 768px) 100vw, 33vw"
@@ -375,7 +375,7 @@ export default async function Page({
         <section className="py-14 bg-coffee-espresso text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              جاهزون لتركيب {service.shortTitle} في موقعك بالرياض
+              جاهزون لتركيب {service.shortTitle} في موقعك ب 
             </h2>
             <p className="text-white/80 mb-8 max-w-xl mx-auto">
               معاينة مجانية وعرض سعر خلال 24 ساعة — اتصل أو راسلنا على الواتساب

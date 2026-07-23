@@ -16,12 +16,12 @@ import {
 } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
-  title: 'معرض الأعمال | مظلات وسواتر الرياض',
+  title: 'معرض الأعمال |  مظلات وسواتر الظل الراقي  ',
   description:
-    'معرض صور مشاريع مظلات وسواتر وبرجولات في الرياض — تصفية حسب النوع، صور حقيقية مع وصف واضح لكل عمل.',
+    'معرض صور مشاريع  مظلات وسواتر الظل الراقي وبرجولات في   — تصفية حسب النوع، صور حقيقية مع وصف واضح لكل عمل.',
   path: '/gallery',
   keywords: [
-    'معرض مظلات الرياض',
+    'معرض مظلات  ',
     'صور سواتر',
     'أعمال مظلات سيارات',
     'مشاريع سواتر حديد',
@@ -37,9 +37,9 @@ export default function GalleryPage() {
       <JsonLd
         data={[
           collectionPageSchema({
-            name: 'معرض أعمال مظلات وسواتر الرياض',
+            name: 'معرض أعمال  مظلات وسواتر الظل الراقي  ',
             description:
-              'صور مشاريع منفذة في الرياض — مظلات، سواتر، برجولات، وحدائق.',
+              'صور مشاريع منفذة في   — مظلات، سواتر، برجولات، وحدائق.',
             path: '/gallery',
             numberOfItems: images.length,
           }),
@@ -65,7 +65,7 @@ export default function GalleryPage() {
                   معرض الأعمال
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  {images.length} صورة من مشاريعنا في الرياض. كل صورة تعرض{' '}
+                  {images.length} صورة من مشاريعنا في  . كل صورة تعرض{' '}
                   <strong className="text-foreground font-medium">اسم العمل</strong> و{' '}
                   <strong className="text-foreground font-medium">نوعه</strong> — يمكنك
                   التصفية حسب التصنيف أو فتح الصورة للمعاينة الكاملة.
@@ -135,7 +135,7 @@ export default function GalleryPage() {
                   جميع الصور
                 </h2>
                 <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                  {images.length} صورة من مشاريعنا في الرياض — تصفية حسب النوع
+                  {images.length} صورة من مشاريعنا في   — تصفية حسب النوع
                 </p>
               </div>
               <GalleryBrowser images={images} types={types} />

@@ -16,7 +16,7 @@ export default function ContactSection() {
             اطلب عرض سعر مجاني
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            فريقنا جاهز لزيارة موقعك في الرياض وتقديم استشارة وعرض سعر غير ملزم خلال 24 ساعة.
+            فريقنا جاهز لزيارة موقعك في   وتقديم استشارة وعرض سعر غير ملزم خلال 24 ساعة.
           </p>
         </div>
 

@@ -61,7 +61,7 @@ export default function Header() {
                 {companyInfo.name}
               </span>
               <span className="text-[11px] text-muted-foreground mt-1">
-                خبراء السواتر والمظلات — الرياض
+                خبراء السواتر والمظلات —  
               </span>
             </div>
           </Link>
