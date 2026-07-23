@@ -45,7 +45,7 @@ export function buildPageMetadata({
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} — تركيب  مظلات وسواتر الظل الراقي في  `,
+          alt: `${SITE_NAME} — تركيب  المظلات والسواتر   في  `,
         },
       ],
     },
