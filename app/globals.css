@@ -1,61 +1,61 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   نظام التصميم — "مسار الشمس" (Sun to Shadow)
-   من إشراقة الشمس البرتقالية، عبر شفق بنفسجي، إلى ظل كحلي داكن —
-   بالضبط ما تفعله المظلات والسواتر: تدرّج الضوء إلى ظل.
+   نظام التصميم الجديد — "ظل الواحة" (Oasis Shade)
+   هوية بصرية صحراوية سعودية فاخرة: رمل دافئ + ذهب الشمس + بني قهوة +
+   خشب داكن + فولاذ أسود. مستوحاة من العمارة النجدية والمعدن المشغول.
+   نفس أسماء المتغيرات القديمة محفوظة → كل مكوّن حالي يتغيّر شكله تلقائياً
+   دون الحاجة لتعديل كل ملف على حدة.
    ========================================================================== */
 
 :root {
   /* سطوح فاتحة (الأقسام العادية) */
-  --canvas: #F7F6FB;         /* أبيض بارد بلمسة بنفسجية خفيفة */
-  --canvas-2: #EFEDF7;
+  --canvas: #FBF7EF;         /* رمل فاتح دافئ */
+  --canvas-2: #F3E9D8;       /* رمل أغمق قليلاً للتباين بين الأقسام */
   --paper: #FFFFFF;
 
   /* سطوح داكنة (الهيرو، الفوتر، أقسام التباين) */
-  --night: #0B0A17;
-  --night-2: #131226;
-  --night-3: #1D1B36;
+  --night: #161616;          /* فولاذ أسود */
+  --night-2: #201A14;        /* بني محروق داكن */
+  --night-3: #2F241D;        /* خشب داكن */
 
-  --ink: #14121F;             /* نص أساسي على الفاتح */
-  --ink-soft: #4B4760;
+  --ink: #201A14;            /* نص أساسي على الفاتح — بني قهوة غامق */
+  --ink-soft: #6B5A47;
 
   --background: var(--canvas);
   --foreground: var(--ink);
   --muted: var(--canvas-2);
-  --muted-foreground: #6B6480;
-  --border: #E2DFEF;
-  --border-dark: #2B2946;
+  --muted-foreground: #8A7358;
+  --border: #E7DAC0;
+  --border-dark: #3A2E22;
 
-  /* هوية "مسار الشمس": من الكهرمان إلى البنفسجي إلى الأزرق النيلي */
-  --sun: #FF9142;
-  --sun-light: #FFB673;
-  --coral: #FF5E7A;
-  --dusk: #9B5CF6;
-  --indigo: #6C4CE0;
-  --sky: #4C6EF5;
+  /* هوية "ظل الواحة": من الذهب الشمسي إلى الكهرمان إلى البني القهوة */
+  --sun: #D9A441;             /* ذهبي — اللون المميز (Accent) */
+  --sun-light: #E7C38B;       /* كهرمان فاتح */
+  --coral: #C69C6D;           /* كامل / رمل ذهبي */
+  --dusk: #A97142;            /* بني نحاسي */
+  --indigo: #7A5230;          /* بني قهوة */
+  --sky: #5B3A29;             /* بني خشب داكن */
 
-  --primary: var(--indigo);
-  --primary-dark: #4B37B0;
-  --primary-light: var(--dusk);
+  --primary: var(--sun);
+  --primary-dark: #B9862F;
+  --primary-light: var(--sun-light);
 
-  --success: #22B37A;
-  --error: #F2495C;
+  --success: #4E7C4A;
+  --error: #B3462F;
 
-  --gradient-sun: linear-gradient(90deg, var(--sun) 0%, var(--coral) 35%, var(--dusk) 68%, var(--indigo) 100%);
-  --gradient-glow: radial-gradient(circle, var(--dusk) 0%, transparent 70%);
+  --gradient-sun: linear-gradient(90deg, #F7E7CE 0%, var(--sun) 45%, var(--dusk) 78%, var(--indigo) 100%);
+  --gradient-glow: radial-gradient(circle, var(--sun) 0%, transparent 70%);
 
-  --card-shadow: 0 1px 2px 0 rgb(20 18 31 / 0.06), 0 8px 24px -8px rgb(76 78 245 / 0.15);
-  --card-shadow-hover: 0 4px 8px 0 rgb(20 18 31 / 0.08), 0 16px 40px -10px rgb(107 76 224 / 0.28);
+  --card-shadow: 0 1px 2px 0 rgb(32 26 20 / 0.06), 0 8px 24px -8px rgb(122 82 48 / 0.18);
+  --card-shadow-hover: 0 4px 8px 0 rgb(32 26 20 / 0.10), 0 16px 40px -10px rgb(169 113 66 / 0.32);
 
-  /* ---- توافق مع الأقسام الداخلية القديمة (coffee/desert) ----
-     إعادة تعيين الأسماء القديمة إلى هوية "مسار الشمس" الجديدة بدل
-     تركها بلا تعريف (كانت تُعرض بلا ألوان فعلياً). هذا يوحّد كل
-     صفحات الموقع الداخلية مع تصميم الهيرو الجديد فوراً. */
+  /* ---- توافق مع الأسماء القديمة "coffee/desert" ----
+     الآن هذه الأسماء تُعبّر عن هويتها الحرفية بدل إعادة التوجيه لبنفسجي. */
   --coffee-light: var(--sun-light);
   --coffee-medium: var(--dusk);
   --coffee-dark: var(--indigo);
-  --coffee-espresso: var(--night);
+  --coffee-espresso: var(--night-2);
   --sand-light: var(--canvas-2);
 }
 
@@ -98,6 +98,13 @@
   --font-sans: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', system-ui, sans-serif;
   --font-display: 'Cairo', 'IBM Plex Sans Arabic', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* -------- توكِنز جديدة: الانحناء والمسافات (design tokens) -------- */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --space-section: clamp(4rem, 8vw, 8rem);
 }
 
 /* ============================== الأساسيات ============================== */
@@ -138,7 +145,7 @@ a:focus-visible, button:focus-visible {
 
 .container { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
 
-/* ==================== الشِعار البصري: تدرّج الشمس ==================== */
+/* ==================== الشِعار البصري: تدرّج غروب الصحراء ==================== */
 
 .text-gradient-sun {
   background: var(--gradient-sun);
@@ -149,35 +156,36 @@ a:focus-visible, button:focus-visible {
 
 .bg-gradient-sun { background: var(--gradient-sun); }
 
+/* خلفية الهيرو الليلية — فولاذ أسود مع توهّج ذهبي/نحاسي، بدل النيلي/البنفسجي */
 .bg-night-sky {
   background:
-    radial-gradient(1100px 500px at 15% -10%, rgb(255 145 66 / 0.20), transparent 60%),
-    radial-gradient(900px 600px at 90% 10%, rgb(107 76 224 / 0.35), transparent 60%),
-    radial-gradient(700px 500px at 50% 120%, rgb(76 110 245 / 0.20), transparent 60%),
+    radial-gradient(1200px 550px at 12% -10%, rgb(217 164 65 / 0.22), transparent 60%),
+    radial-gradient(950px 620px at 92% 8%, rgb(169 113 66 / 0.30), transparent 60%),
+    radial-gradient(750px 520px at 50% 120%, rgb(122 82 48 / 0.28), transparent 60%),
     var(--night);
 }
 
-/* بطاقة زجاجية حديثة — glassmorphism مقصود ومتحكَّم به */
+/* بطاقة زجاجية دافئة — glassmorphism بلمسة نحاسية بدل الزرقاء الباردة */
 .glass-card {
-  background: rgb(255 255 255 / 0.06);
+  background: rgb(247 231 206 / 0.07);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgb(255 255 255 / 0.12);
+  border: 1px solid rgb(231 195 139 / 0.18);
 }
 
 .glass-card-light {
-  background: rgb(255 255 255 / 0.7);
+  background: rgb(255 255 255 / 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgb(255 255 255 / 0.6);
+  border: 1px solid rgb(231 218 192 / 0.7);
   box-shadow: var(--card-shadow);
 }
 
 .glow-dusk {
-  box-shadow: 0 0 0 1px rgb(107 76 224 / 0.25), 0 20px 60px -15px rgb(107 76 224 / 0.55);
+  box-shadow: 0 0 0 1px rgb(217 164 65 / 0.3), 0 20px 60px -15px rgb(169 113 66 / 0.55);
 }
 
-/* توهج طيفي عائم خلف عناصر الهيرو — يمثّل حركة الشمس */
+/* توهج عائم خلف عناصر الهيرو — قرص الشمس الذهبي وظل الأرض الداكن */
 .sun-orb {
   background: radial-gradient(circle at 35% 35%, var(--sun-light), var(--sun) 40%, transparent 72%);
   filter: blur(2px);
@@ -187,15 +195,29 @@ a:focus-visible, button:focus-visible {
   background: radial-gradient(circle, var(--indigo), transparent 70%);
 }
 
-/* خط فاصل بتدرج الشمس */
+/* خط فاصل بتدرج الغروب */
 .gradient-rule { height: 3px; background: var(--gradient-sun); border-radius: 999px; }
 
-/* خلفية فاتحة دافئة للأقسام الداخلية (بديل "الصحراء" القديم) */
+/* خلفية فاتحة دافئة للأقسام الداخلية — رمل حقيقي بدل استعارة الاسم فقط */
 .bg-gradient-desert {
   background: linear-gradient(160deg, var(--paper) 0%, var(--canvas) 55%, var(--canvas-2) 100%);
 }
 
 .bg-gradient-primary { background: var(--gradient-sun); }
+
+/* نسيج خشبي/معدني خفيف جداً — طبقة إحساس بالحرفية دون إزعاج بصري */
+.texture-grain {
+  position: relative;
+}
+.texture-grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: repeating-linear-gradient(115deg, #000 0px, transparent 1px, transparent 3px);
+}
 
 /* شريط تقدّم القراءة أعلى الصفحة */
 .scroll-progress-track {
@@ -249,7 +271,7 @@ a:focus-visible, button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px -5px rgb(20 18 31 / 0.35);
+  box-shadow: 0 10px 25px -5px rgb(32 26 20 / 0.35);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
@@ -258,7 +280,7 @@ a:focus-visible, button:focus-visible {
 
 .floating-contact-btn svg { width: 26px; height: 26px; }
 
-.floating-contact-btn.whatsapp { background: #22B37A; color: white; }
+.floating-contact-btn.whatsapp { background: #4E7C4A; color: white; }
 .floating-contact-btn.phone { background: var(--gradient-sun); color: white; }
 
 .floating-contact-btn .tooltip {
