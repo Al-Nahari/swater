@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
 import { getAllPublishedArticleSlugs, getPublishedArticleBySlug } from '@/features/articles/queries';
 import { articleSchema, breadcrumbSchema, buildPageMetadata } from '@/lib/seo';
+import { DEFAULT_OG_IMAGE } from '@/lib/site';
 
 export async function generateStaticParams() {
   const slugs = await getAllPublishedArticleSlugs();
@@ -39,7 +40,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       headline: article.title,
       description: article.excerpt,
       path: `/blog/${article.slug}`,
-      image: article.coverImage ?? undefined,
+      image: article.coverImage ?? DEFAULT_OG_IMAGE,
       datePublished: (article.publishedAt ?? article.createdAt).toISOString(),
     }),
     breadcrumbSchema([
