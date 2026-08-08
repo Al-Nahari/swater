@@ -122,13 +122,21 @@ export async function getServiceViewModelBySlug(slug: string): Promise<ServiceVi
 }
 
 export async function getAllServiceSlugsForStaticParams(): Promise<string[]> {
-  const dbServices = await prisma.service.findMany({
-    where: { status: 'PUBLISHED', deletedAt: null },
-    select: { slug: true },
-  });
-  const dbSlugs = new Set<string>(dbServices.map((s) => s.slug));
-  const staticSlugs = staticServices.map((s) => s.slug).filter((slug) => !dbSlugs.has(slug));
-  return [...dbSlugs, ...staticSlugs];
+  // تُستدعى وقت البناء (generateStaticParams). لو تعذّر الاتصال بقاعدة البيانات
+  // في تلك اللحظة، لا نُسقط البناء بالكامل — نكتفي بالـ slugs الثابتة القديمة،
+  // وبقية الصفحات ستُبنى عند أول طلب بفضل dynamicParams = true في الصفحة.
+  try {
+    const dbServices = await prisma.service.findMany({
+      where: { status: 'PUBLISHED', deletedAt: null },
+      select: { slug: true },
+    });
+    const dbSlugs = new Set<string>(dbServices.map((s) => s.slug));
+    const staticSlugs = staticServices.map((s) => s.slug).filter((slug) => !dbSlugs.has(slug));
+    return [...dbSlugs, ...staticSlugs];
+  } catch (error) {
+    console.warn('[getAllServiceSlugsForStaticParams] تعذّر الوصول لقاعدة البيانات أثناء البناء:', error);
+    return staticServices.map((s) => s.slug);
+  }
 }
 
 /** يُستخدم لحل related services بعد جلب القائمة الكاملة */
@@ -220,13 +228,22 @@ export async function getProjectViewModelBySlug(slug: string): Promise<ProjectVi
 }
 
 export async function getAllProjectSlugsForStaticParams(): Promise<{ slug: string; updatedAt: Date }[]> {
-  const dbProjects = await prisma.project.findMany({
-    where: { status: 'PUBLISHED', deletedAt: null },
-    select: { slug: true, updatedAt: true },
-  });
-  const dbSlugs = new Set<string>(dbProjects.map((p) => p.slug));
-  const staticOnly = staticProjects
-    .filter((p) => !dbSlugs.has(p.slug))
-    .map((p) => ({ slug: p.slug, updatedAt: new Date(`${p.completedLabel || '2025'}-06-01`) }));
-  return [...dbProjects, ...staticOnly];
+  // نفس منطق المرونة وقت البناء المطبّق في getAllServiceSlugsForStaticParams أعلاه.
+  try {
+    const dbProjects = await prisma.project.findMany({
+      where: { status: 'PUBLISHED', deletedAt: null },
+      select: { slug: true, updatedAt: true },
+    });
+    const dbSlugs = new Set<string>(dbProjects.map((p) => p.slug));
+    const staticOnly = staticProjects
+      .filter((p) => !dbSlugs.has(p.slug))
+      .map((p) => ({ slug: p.slug, updatedAt: new Date(`${p.completedLabel || '2025'}-06-01`) }));
+    return [...dbProjects, ...staticOnly];
+  } catch (error) {
+    console.warn('[getAllProjectSlugsForStaticParams] تعذّر الوصول لقاعدة البيانات أثناء البناء:', error);
+    return staticProjects.map((p) => ({
+      slug: p.slug,
+      updatedAt: new Date(`${p.completedLabel || '2025'}-06-01`),
+    }));
+  }
 }

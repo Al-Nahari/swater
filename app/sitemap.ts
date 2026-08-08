@@ -7,9 +7,9 @@ const LAST_UPDATED = new Date('2025-06-01');
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [services, projects, articles] = await Promise.all([
-    getServiceViewModels(),
-    getProjectViewModels(),
-    getPublishedArticles().catch(() => []), // لا نوقف بناء الـ sitemap لو DB غير جاهزة بعد
+    getServiceViewModels().catch(() => []), // لا نوقف بناء الـ sitemap لو DB غير جاهزة بعد
+    getProjectViewModels().catch(() => []),
+    getPublishedArticles().catch(() => []),
   ]);
 
   const servicePages = services.map((service) => ({

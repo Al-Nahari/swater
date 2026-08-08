@@ -24,6 +24,10 @@ import {
   serviceSchema,
 } from '@/lib/seo';
 
+// يسمح ببناء أي صفحة خدمة لم تُدرَج ضمن generateStaticParams (لو فشل الاتصال
+// بقاعدة البيانات وقت البناء مثلًا) عند أول طلب لها بدل إرجاع 404.
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const slugs = await getAllServiceSlugsForStaticParams();
   return slugs.map((slug) => ({ slug }));

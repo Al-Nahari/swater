@@ -19,6 +19,10 @@ import {
   imageGallerySchema,
 } from '@/lib/seo';
 
+// يسمح ببناء أي صفحة مشروع لم تُدرَج ضمن generateStaticParams (لو فشل الاتصال
+// بقاعدة البيانات وقت البناء مثلًا) عند أول طلب لها بدل إرجاع 404.
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   const slugs = await getAllProjectSlugsForStaticParams();
   return slugs.map(({ slug }) => ({ project: slug }));

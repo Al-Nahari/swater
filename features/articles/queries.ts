@@ -18,11 +18,20 @@ export async function getPublishedArticleBySlug(slug: string) {
 }
 
 export async function getAllPublishedArticleSlugs() {
-  const articles = await prisma.article.findMany({
-    where: { status: 'PUBLISHED', deletedAt: null },
-    select: { slug: true, updatedAt: true },
-  });
-  return articles;
+  // تُستدعى هذه الدالة من generateStaticParams في app/blog/[slug]/page.tsx وقت
+  // البناء (Build Time) على Vercel. أي عطل مؤقت في الاتصال بقاعدة البيانات (أو
+  // متغير بيئة غير متاح في تلك اللحظة تحديدًا) لا يجب أن يُسقط البناء بالكامل؛
+  // الصفحات ستُبنى عند أول طلب (on-demand) بفضل dynamicParams = true في الصفحة.
+  try {
+    const articles = await prisma.article.findMany({
+      where: { status: 'PUBLISHED', deletedAt: null },
+      select: { slug: true, updatedAt: true },
+    });
+    return articles;
+  } catch (error) {
+    console.warn('[getAllPublishedArticleSlugs] تعذّر الوصول لقاعدة البيانات أثناء البناء، سيتم توليد صفحات المدونة عند الطلب:', error);
+    return [];
+  }
 }
 
 export async function listArticlesForAdmin({
