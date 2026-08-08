@@ -1,9 +1,21 @@
 import 'server-only';
 import { prisma } from '@/lib/db/prisma';
+import type { Prisma } from '@prisma/client';
 import { services as staticServices } from '@/lib/data';
 import { projects as staticProjects, type Project as StaticProject } from '@/lib/projects';
 
 type StaticServiceItem = (typeof staticServices)[number];
+
+// أنواع مشتقة تلقائيًا من Prisma Schema نفسه (بدل كتابتها يدويًا) — أي تعديل
+// مستقبلي على schema.prisma (حقل جديد، حذف حقل) ينعكس هنا تلقائيًا بدون نسيان
+// تحديث Type يدوي، وهو بالضبط سبب الخطأ الذي ظهر في بناء Vercel (isCover) سابقًا.
+type ServiceWithRelations = Prisma.ServiceGetPayload<{
+  include: { images: true; faqs: true };
+}>;
+
+type ProjectWithRelations = Prisma.ProjectGetPayload<{
+  include: { images: true; service: { select: { slug: true; title: true } } };
+}>;
 
 // ============================================================================
 // الشكل القديم (Legacy Shape) الذي تتوقعه صفحات app/[slug] و app/gallery/[project]
@@ -34,10 +46,7 @@ export type ServiceViewModel = {
   };
 };
 
-function fromDbService(s: Awaited<ReturnType<typeof prisma.service.findFirst>> & {
-  images: { url: string; caption: string | null; alt: string }[];
-  faqs: { question: string; answer: string }[];
-}): ServiceViewModel {
+function fromDbService(s: ServiceWithRelations): ServiceViewModel {
   return {
     id: s.id,
     slug: s.slug,
@@ -150,12 +159,7 @@ export type ProjectViewModel = {
   updatedAt: Date;
 };
 
-function fromDbProject(
-  p: Awaited<ReturnType<typeof prisma.project.findFirst>> & {
-    images: { url: string; alt: string; caption: string | null }[];
-    service: { slug: string; title: string } | null;
-  }
-): ProjectViewModel {
+function fromDbProject(p: ProjectWithRelations): ProjectViewModel {
   return {
     id: p.id,
     slug: p.slug,
