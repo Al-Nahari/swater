@@ -98,24 +98,36 @@ function fromStaticService(raw: StaticServiceItem): ServiceViewModel {
  * بعد تأكيد ترحيل كل الخدمات عبر seed، يمكن حذف جزء "static" من هذه الدالة.
  */
 export async function getServiceViewModels(): Promise<ServiceViewModel[]> {
-  const dbServices = await prisma.service.findMany({
-    where: { status: 'PUBLISHED', deletedAt: null },
-    orderBy: [{ order: 'asc' }, { priority: 'asc' }],
-    include: { images: { orderBy: { order: 'asc' } }, faqs: { orderBy: { order: 'asc' } } },
-  });
+  // نفس مبدأ المرونة: أي عطل في الاتصال بقاعدة البيانات (خصوصًا وقت البناء لو
+  // DATABASE_URL غير متاح في تلك اللحظة) لا يجب أن يُسقط تجهيز الصفحة بالكامل —
+  // نكتفي بالبيانات الثابتة القديمة كخط دفاع أخير.
+  try {
+    const dbServices = await prisma.service.findMany({
+      where: { status: 'PUBLISHED', deletedAt: null },
+      orderBy: [{ order: 'asc' }, { priority: 'asc' }],
+      include: { images: { orderBy: { order: 'asc' } }, faqs: { orderBy: { order: 'asc' } } },
+    });
 
-  const dbSlugs = new Set<string>(dbServices.map((s) => s.slug));
-  const staticOnly = staticServices.filter((s) => !dbSlugs.has(s.slug)).map(fromStaticService);
+    const dbSlugs = new Set<string>(dbServices.map((s) => s.slug));
+    const staticOnly = staticServices.filter((s) => !dbSlugs.has(s.slug)).map(fromStaticService);
 
-  return [...dbServices.map(fromDbService), ...staticOnly].sort((a, b) => a.priority - b.priority);
+    return [...dbServices.map(fromDbService), ...staticOnly].sort((a, b) => a.priority - b.priority);
+  } catch (error) {
+    console.warn('[getServiceViewModels] تعذّر الوصول لقاعدة البيانات، سيتم عرض البيانات الثابتة القديمة فقط:', error);
+    return staticServices.map(fromStaticService).sort((a, b) => a.priority - b.priority);
+  }
 }
 
 export async function getServiceViewModelBySlug(slug: string): Promise<ServiceViewModel | null> {
-  const dbService = await prisma.service.findFirst({
-    where: { slug, status: 'PUBLISHED', deletedAt: null },
-    include: { images: { orderBy: { order: 'asc' } }, faqs: { orderBy: { order: 'asc' } } },
-  });
-  if (dbService) return fromDbService(dbService);
+  try {
+    const dbService = await prisma.service.findFirst({
+      where: { slug, status: 'PUBLISHED', deletedAt: null },
+      include: { images: { orderBy: { order: 'asc' } }, faqs: { orderBy: { order: 'asc' } } },
+    });
+    if (dbService) return fromDbService(dbService);
+  } catch (error) {
+    console.warn(`[getServiceViewModelBySlug] تعذّر الوصول لقاعدة البيانات لـ slug="${slug}"، سيتم تجربة البيانات الثابتة القديمة:`, error);
+  }
 
   const staticService = staticServices.find((s) => s.slug === slug);
   return staticService ? fromStaticService(staticService) : null;
@@ -204,24 +216,33 @@ function fromStaticProject(p: StaticProject): ProjectViewModel {
 }
 
 export async function getProjectViewModels(): Promise<ProjectViewModel[]> {
-  const dbProjects = await prisma.project.findMany({
-    where: { status: 'PUBLISHED', deletedAt: null },
-    orderBy: { createdAt: 'desc' },
-    include: { images: { orderBy: { order: 'asc' } }, service: { select: { slug: true, title: true } } },
-  });
+  try {
+    const dbProjects = await prisma.project.findMany({
+      where: { status: 'PUBLISHED', deletedAt: null },
+      orderBy: { createdAt: 'desc' },
+      include: { images: { orderBy: { order: 'asc' } }, service: { select: { slug: true, title: true } } },
+    });
 
-  const dbSlugs = new Set<string>(dbProjects.map((p) => p.slug));
-  const staticOnly = staticProjects.filter((p) => !dbSlugs.has(p.slug)).map(fromStaticProject);
+    const dbSlugs = new Set<string>(dbProjects.map((p) => p.slug));
+    const staticOnly = staticProjects.filter((p) => !dbSlugs.has(p.slug)).map(fromStaticProject);
 
-  return [...dbProjects.map(fromDbProject), ...staticOnly];
+    return [...dbProjects.map(fromDbProject), ...staticOnly];
+  } catch (error) {
+    console.warn('[getProjectViewModels] تعذّر الوصول لقاعدة البيانات، سيتم عرض البيانات الثابتة القديمة فقط:', error);
+    return staticProjects.map(fromStaticProject);
+  }
 }
 
 export async function getProjectViewModelBySlug(slug: string): Promise<ProjectViewModel | null> {
-  const dbProject = await prisma.project.findFirst({
-    where: { slug, status: 'PUBLISHED', deletedAt: null },
-    include: { images: { orderBy: { order: 'asc' } }, service: { select: { slug: true, title: true } } },
-  });
-  if (dbProject) return fromDbProject(dbProject);
+  try {
+    const dbProject = await prisma.project.findFirst({
+      where: { slug, status: 'PUBLISHED', deletedAt: null },
+      include: { images: { orderBy: { order: 'asc' } }, service: { select: { slug: true, title: true } } },
+    });
+    if (dbProject) return fromDbProject(dbProject);
+  } catch (error) {
+    console.warn(`[getProjectViewModelBySlug] تعذّر الوصول لقاعدة البيانات لـ slug="${slug}"، سيتم تجربة البيانات الثابتة القديمة:`, error);
+  }
 
   const staticProject = staticProjects.find((p) => p.slug === slug);
   return staticProject ? fromStaticProject(staticProject) : null;

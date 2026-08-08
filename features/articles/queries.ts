@@ -3,18 +3,30 @@ import { prisma } from '@/lib/db/prisma';
 import type { ContentStatus, Prisma } from '@prisma/client';
 
 export async function getPublishedArticles() {
-  return prisma.article.findMany({
-    where: { status: 'PUBLISHED', deletedAt: null },
-    orderBy: { publishedAt: 'desc' },
-    include: { category: true },
-  });
+  // لا يوجد fallback ثابت للمدونة (محتوى DB بالكامل)، لذا عند فشل الاتصال
+  // نُعيد قائمة فارغة بدل إسقاط الصفحة/البناء بالكامل.
+  try {
+    return await prisma.article.findMany({
+      where: { status: 'PUBLISHED', deletedAt: null },
+      orderBy: { publishedAt: 'desc' },
+      include: { category: true },
+    });
+  } catch (error) {
+    console.warn('[getPublishedArticles] تعذّر الوصول لقاعدة البيانات:', error);
+    return [];
+  }
 }
 
 export async function getPublishedArticleBySlug(slug: string) {
-  return prisma.article.findFirst({
-    where: { slug, status: 'PUBLISHED', deletedAt: null },
-    include: { category: true },
-  });
+  try {
+    return await prisma.article.findFirst({
+      where: { slug, status: 'PUBLISHED', deletedAt: null },
+      include: { category: true },
+    });
+  } catch (error) {
+    console.warn(`[getPublishedArticleBySlug] تعذّر الوصول لقاعدة البيانات لـ slug="${slug}":`, error);
+    return null;
+  }
 }
 
 export async function getAllPublishedArticleSlugs() {
