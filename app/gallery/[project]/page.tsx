@@ -6,8 +6,12 @@ import Footer from '@/components/Footer';
 import ContactButton from '@/components/Contact';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
-import { projects, getProjectBySlug } from '@/lib/projects';
-import { services } from '@/lib/data';
+import {
+  getAllProjectSlugsForStaticParams,
+  getProjectViewModelBySlug,
+  getProjectViewModels,
+} from '@/lib/legacy-adapter';
+import { getServiceViewModels } from '@/lib/legacy-adapter';
 import {
   articleSchema,
   breadcrumbSchema,
@@ -16,7 +20,8 @@ import {
 } from '@/lib/seo';
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({ project: project.slug }));
+  const slugs = await getAllProjectSlugsForStaticParams();
+  return slugs.map(({ slug }) => ({ project: slug }));
 }
 
 export async function generateMetadata({
@@ -25,7 +30,7 @@ export async function generateMetadata({
   params: Promise<{ project: string }>;
 }) {
   const { project: slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectViewModelBySlug(slug);
 
   if (!project) {
     return buildPageMetadata({
@@ -50,20 +55,22 @@ export default async function ProjectPage({
   params: Promise<{ project: string }>;
 }) {
   const { project: slug } = await params;
-  const project = getProjectBySlug(slug);
+  const project = await getProjectViewModelBySlug(slug);
 
   if (!project) {
     notFound();
   }
 
-  const relatedService = services.find((s) => s.slug === project.serviceSlug);
+  const allServices = await getServiceViewModels();
+  const relatedService = allServices.find((s) => s.slug === project.serviceSlug);
   const paragraphs = project.description.trim().split(/\n\n+/).filter(Boolean);
   const allImages = [
     { image: project.coverImage, alt: project.coverAlt, caption: project.title },
     ...project.gallery.map((g) => ({ image: g.image, alt: g.alt, caption: g.caption })),
   ];
 
-  const otherProjects = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
+  const allProjects = await getProjectViewModels();
+  const otherProjects = allProjects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
   const jsonLd = [
     articleSchema({

@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
-import { services, companyInfo } from '@/lib/data';
+import { companyInfo } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactButton from '@/components/Contact';
@@ -12,23 +12,21 @@ import ProcessSteps from '@/components/ProcessSteps';
 import ComparisonTable from '@/components/ComparisonTable';
 import { mergeServiceGallery } from '@/lib/gallery';
 import {
+  getAllServiceSlugsForStaticParams,
+  getServiceViewModelBySlug,
+  getServiceViewModels,
+  resolveRelatedServices,
+} from '@/lib/legacy-adapter';
+import {
   breadcrumbSchema,
   buildPageMetadata,
   faqPageSchema,
   serviceSchema,
 } from '@/lib/seo';
 
-type ArticleBlock = { heading: string; body: string };
-type ComparisonData = {
-  title: string;
-  leftLabel: string;
-  rightLabel: string;
-  rows: { feature: string; left: string | boolean; right: string | boolean }[];
-};
-type ServiceExtras = { article?: ArticleBlock[]; comparison?: ComparisonData };
-
 export async function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  const slugs = await getAllServiceSlugsForStaticParams();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -37,7 +35,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
+  const service = await getServiceViewModelBySlug(slug);
   if (!service) {
     return buildPageMetadata({
       title: 'خدمة غير موجودة',
@@ -61,7 +59,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const service = services.find((s) => s.slug === slug);
+  const service = await getServiceViewModelBySlug(slug);
 
   if (!service) {
     notFound();
@@ -74,12 +72,10 @@ export default async function Page({
     .filter(Boolean);
   const leadParagraph = summaryParagraphs[0] ?? service.description;
 
-  // Related services
-  const relatedServices = service.relatedServices
-    ? service.relatedServices
-        .map((id: string) => services.find((s) => s.id === id))
-        .filter(Boolean)
-    : [];
+  // Related services — تُحلّ من قائمة الـ IDs المخزّنة على الخدمة نفسها
+  const allServices = service.relatedServices.length > 0 ? await getServiceViewModels() : [];
+  const relatedServices = resolveRelatedServices(service.relatedServices, allServices);
+
 
   const jsonLd = [
     serviceSchema({
@@ -243,20 +239,20 @@ export default async function Page({
         <ProcessSteps />
 
         {/* Comparison table (optional, per-service) */}
-        {(service as unknown as ServiceExtras).comparison && (
+        {service.comparison && (
           <section className="py-14 md:py-16 bg-white" aria-labelledby="comparison-heading">
             <div className="container mx-auto px-4">
               <h2 id="comparison-heading" className="sr-only">
                 مقارنة {service.shortTitle}
               </h2>
-              <ComparisonTable {...(service as unknown as ServiceExtras).comparison!} />
+              <ComparisonTable {...service.comparison} />
             </div>
           </section>
         )}
 
         {/* Long-form article (optional, per-service) */}
         {(() => {
-          const article = (service as unknown as ServiceExtras).article;
+          const article = service.article;
           if (!article || article.length === 0) return null;
           return (
             <section className="py-14 md:py-16 bg-gradient-desert" aria-labelledby="article-heading">
@@ -266,7 +262,7 @@ export default async function Page({
                     دليلك الكامل عن {service.shortTitle} في  
                   </h2>
                   <div className="space-y-8">
-                    {article.map((block: ArticleBlock, index: number) => (
+                    {article.map((block, index: number) => (
                       <div key={index}>
                         <h3 className="text-xl font-bold text-foreground mb-3">{block.heading}</h3>
                         <p className="text-muted-foreground leading-relaxed">{block.body}</p>
@@ -338,7 +334,7 @@ export default async function Page({
                   خدمات ذات صلة
                 </h2>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                  {relatedServices.map((related: any) => (
+                  {relatedServices.map((related) => (
                     <Link
                       key={related.id}
                       href={`/${related.slug}`}

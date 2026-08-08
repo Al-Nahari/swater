@@ -8,7 +8,7 @@ import GalleryBrowser from '@/components/GalleryBrowser';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import JsonLd from '@/components/JsonLd';
 import { getAllGalleryImages, getAllGalleryTypes } from '@/lib/gallery';
-import { projects } from '@/lib/projects';
+import { getProjectViewModels } from '@/lib/legacy-adapter';
 import {
   breadcrumbSchema,
   buildPageMetadata,
@@ -28,9 +28,10 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
   const images = getAllGalleryImages();
   const types = getAllGalleryTypes();
+  const projects = await getProjectViewModels();
 
   return (
     <>

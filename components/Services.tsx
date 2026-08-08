@@ -3,9 +3,18 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { services } from '@/lib/services-summary';
 
-export default function Services() {
+type ServiceCard = {
+  id: string;
+  title: string;
+  shortTitle: string;
+  description: string;
+  features: string[];
+  image: string;
+  slug: string;
+};
+
+export default function Services({ services }: { services: ServiceCard[] }) {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (

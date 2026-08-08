@@ -10,6 +10,7 @@ import TrustBadges from '@/components/TrustBadges';
 import ProcessSteps from '@/components/ProcessSteps';
 import { companyInfo } from '@/lib/data';
 import { buildPageMetadata } from '@/lib/seo';
+import { getServiceViewModels } from '@/lib/legacy-adapter';
 
 const Features = dynamic(() => import('@/components/Features'), {
   loading: () => <div className="h-96 bg-sand-light/20 rounded-xl animate-pulse" />,
@@ -39,14 +40,16 @@ export const metadata: Metadata = buildPageMetadata({
   ],
 });
 
-export default function Home() {
+export default async function Home() {
+  const services = await getServiceViewModels();
+
   return (
     <>
       <Header />
       <main id="main-content">
         <Hero />
         <TrustBadges />
-        <Services />
+        <Services services={services} />
         <ProcessSteps />
         <Features />
         <Testimonials />
